@@ -1,0 +1,44 @@
+$color1: #DA7A04;
+$color2: #FCE8D2;
+$color3: #393939;
+$color4: #222222;
+$shadow-settings: 14px 0px 9.300000190734863px 10px rgba(0, 0, 0, 0.25);
+$font: 'Mulish', sans-serif;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+}
+
+header {
+    padding: 3px;
+    margin: auto;
+    background-color: $color4;
+    box-shadow: $shadow-settings;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    float: right;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #DA7A04;
+    display: inline-block;
+    padding: 40px 30px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+.icons {
+    text-decoration: none;
+    color: #DA7A04;
+    padding: 0px 30px;
+}
