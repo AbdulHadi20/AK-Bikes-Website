@@ -11,23 +11,62 @@
     <link rel="stylesheet" href= "CSS Files/index.css">
 </head>
 <body>
-    <header>
-        <img src="Media/mainlogo.png" alt="logo" id="logo">
+    <header> <!--header code-->
+        <!--image logo, which is linked to the homepage-->
+        <a href="index.html"><img src="Media/mainlogo.png" alt="logo" id="logo"></a>
         
-        <div class="menu">
-            <a href="#">Shop</a>
-            <a href="#">Services</a>
-            <a href="#">Rentals</a>
-            <a href="#">About Us</a>   
-        </div>
+        <ul class="nav-bar">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Rentals</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
 
         <div class="icons">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
+            <a href="#"><i class="fa-solid fa-magnifying-glass" id="search" onclick="toggleSearchBar()"></i></a> <!--search icon-->
+            <input type="search" placeholder="Search..." class="searchbar" onblur="hideSearchBar()">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
             <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
         </div>
         
     </header>
+
+    <div class="slideshow">
+        
+        <div class="slides">
+            <div class="slide1">
+                <h2>Fuel Your Passion</h2>
+                <h1>Discover Your Ride</h1>
+                <button><a href="#">Shop Bikes</a></button>
+            </div>
     
+            <div class="slide2">
+                <h2>Introducing Our</h2>
+                <h1>Ultimate Bike Service Kit</h1>
+                <button><a href="#">Shop Bikes</a></button>
+            </div>
+    
+            <div class="slide3">
+                <h2>Fuel Your Passion</h2>
+                <h1>Discover Your Ride</h1>
+                <button><a href="#">Shop Bikes</a></button>
+            </div>
+    
+            <div class="slide4">
+                <h2>Fuel Your Passion</h2>
+                <h1>Discover Your Ride</h1>
+                <button><a href="#">Shop Bikes</a></button>
+            </div>
+    
+            <div class="slide5">
+                <h2>Fuel Your Passion</h2>
+                <h1>Discover Your Ride</h1>
+                <button><a href="#">Shop Bikes</a></button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="Javascript Files/index.js"></script>
 </body>
 </html>

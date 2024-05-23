@@ -2,6 +2,7 @@ $color1: #DA7A04;
 $color2: #FCE8D2;
 $color3: #393939;
 $color4: #222222;
+$color5: #FFFBF6;
 $shadow-settings: 14px 0px 9.300000190734863px 10px rgba(0, 0, 0, 0.25);
 $font: 'Mulish', sans-serif;
 
@@ -12,33 +13,114 @@ $font: 'Mulish', sans-serif;
     font-family: $font;
 }
 
-header {
-    padding: 3px;
-    margin: auto;
+
+//.........................HEADER STYLING...................................//
+
+// setting up the header background colors, padding and layout
+header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 3%;
+    transition: all .50s ease;
     background-color: $color4;
     box-shadow: $shadow-settings;
+}
+
+// setting up the logo size in header
+header img {
+    width: 110px;
+    height: 120px;
+}
+
+// setting up the layout for the nav menu
+.nav-bar {
     display: flex;
-    justify-content: space-between;
 }
 
-.menu {
-    float: right;
-}
-
-.menu a{
+// setting up the layout for the nav menu and color
+.nav-bar a {
+    padding: 5px 10px;
+    margin: 2px 25px;
     text-decoration: none;
-    color: #DA7A04;
-    display: inline-block;
-    padding: 40px 30px;
+    color: $color1;
+    font-weight: bold;
+    font-size: 1.02rem;
+    border-bottom: 2px solid transparent;
+    transition: all .50s ease;
 }
 
-#logo {
-    width: 100px;
-    height: 100px;
+// setting the list style of nav menu to none, to hide the bullet points
+.nav-bar li {
+    list-style: none;
 }
 
-.icons {
-    text-decoration: none;
-    color: #DA7A04;
-    padding: 0px 30px;
+// setting up the hovering effect in nav menu
+.nav-bar a:hover, .icons i:hover {
+    border-bottom: 1px solid $color1;
+}
+
+// setting up the layout for the icons
+.icons i {
+    color: $color1;
+    padding: 5px 10px;
+    font-size: 1.02rem;
+    border-bottom: 2px solid transparent;
+    transition: all .50s ease;
+}
+
+
+// setting up
+.icons #search {
+    position: absolute;
+}
+
+// setting up the search bar input text
+.icons input {
+    border: none;
+    border-radius: 20px;
+    padding: 5px 100px;
+    transition: width .50s ease, padding .50s ease;
+    opacity: 0;
+
+    &.expanded {
+        width: 300px;
+        opacity: 1;
+    }
+}
+
+
+// setting up the hero section
+.slideshow {
+    padding: 0;
+    margin: auto;
+    font-weight: bold;
+    color: $color5;
+    width: auto;
+}
+
+// setting up the hero section slides
+.slideshow .slides {
+    margin: auto;
+    width: 100%;
+    padding: 0;
+    background-color: #DA7A04;
+}
+
+// setting the layout for the text & buttons
+.slides h1 {
+    margin: auto;
+    padding: 30px 45px;
+    font-size: 80px;
+}
+
+// setting up the background image for slide1
+.slide1 {
+    background-image: url(/Media/salesherobanner.jpg);
+    background-position: contain;
+}
+
+.slide2 {
+    background-image: url(/Media/slide1banner.png);
+    background-size: contain;
 }
