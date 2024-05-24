@@ -114,7 +114,7 @@ header img {
 }
 
 .slides h1 {
-    font-size: 90px;
+    font-size: 70px;
     color: $color5;
     margin: 0px 120px;
     padding: 10px;
@@ -178,4 +178,38 @@ button:hover {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+}
+
+.shopcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 40px;
+    padding: 10px 15px;
+}
+
+.bikeshop, .bikerentals, .bikeservices {
+    width: 400px;
+    height: 400px;
+    background-color: #FCE8D2;
+    text-align: center;
+    color: $color5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: $shadow-settings;
+}
+
+.bikeshop {
+    background-image: url(/Media/bikesalesbannerimg.jpg);
+    background-size: contain;
+}
+
+.bikerentals {
+    background-image: url(/Media/bikerentalsdesktopbanner.png);
+    background-size: contain;
+}
+
+.bikeservices {
+    background-image: url(/Media/bikesrentalbanner.jpg);
+    background-size: contain;
 }
