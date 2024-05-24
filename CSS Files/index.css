@@ -67,32 +67,89 @@ header img {
 }
 
 .slideshow {
-  padding: 0;
   margin: auto;
-  font-weight: bold;
-  color: #FFFBF6;
-  width: auto;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.slideshow .slides {
+.slides {
   margin: auto;
-  width: 100%;
   padding: 0;
-  background-color: #DA7A04;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.slides h4 {
+  font-size: 25px;
+  color: #FFFBF6;
+  margin: 0px 120px;
+  margin-top: 200px;
+  padding: 10px;
 }
 
 .slides h1 {
-  margin: auto;
-  padding: 30px 45px;
-  font-size: 80px;
+  font-size: 90px;
+  color: #FFFBF6;
+  margin: 0px 120px;
+  padding: 10px;
 }
 
-.slide1 {
+button {
+  background-color: #DA7A04;
+  border-radius: 30px;
+  padding: 20px;
+  color: #FFFBF6;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin: 50px 130px;
+}
+
+button:hover {
+  background-color: #FFFBF6;
+  color: #DA7A04;
+  cursor: pointer;
+  border: #DA7A04 1px solid;
+  transition: all 0.5s ease;
+}
+
+#slide1 {
   background-image: url(/Media/salesherobanner.jpg);
-  background-position: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
 }
 
-.slide2 {
+#slide2 {
   background-image: url(/Media/slide1banner.png);
   background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+#slide3 {
+  background-image: url(/Media/bikepartsdesktopbanner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+#slide4 {
+  background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+#slide5 {
+  background-image: url(/Media/bikerentalsdesktopbanner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

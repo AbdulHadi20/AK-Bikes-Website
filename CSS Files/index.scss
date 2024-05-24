@@ -92,35 +92,90 @@ header img {
 
 // setting up the hero section
 .slideshow {
-    padding: 0;
     margin: auto;
-    font-weight: bold;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.slides {
+    margin: auto;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.slides h4 {
+    font-size: 25px;
     color: $color5;
-    width: auto;
+    margin: 0px 120px;
+    margin-top: 200px;
+    padding: 10px;
 }
 
-// setting up the hero section slides
-.slideshow .slides {
-    margin: auto;
-    width: 100%;
-    padding: 0;
-    background-color: #DA7A04;
-}
-
-// setting the layout for the text & buttons
 .slides h1 {
-    margin: auto;
-    padding: 30px 45px;
-    font-size: 80px;
+    font-size: 90px;
+    color: $color5;
+    margin: 0px 120px;
+    padding: 10px;
 }
 
-// setting up the background image for slide1
-.slide1 {
+button {
+    background-color: $color1;
+    border-radius: 30px;
+    padding: 20px;
+    color: $color5;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    margin: 50px 130px;
+}
+
+button:hover {
+    background-color: $color5;
+    color: $color1;
+    cursor: pointer;
+    border: $color1 1px solid;
+    transition: all 0.5s ease;
+}
+
+// setting the background images for all slides
+#slide1 {
     background-image: url(/Media/salesherobanner.jpg);
-    background-position: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
 }
 
-.slide2 {
+#slide2 {
     background-image: url(/Media/slide1banner.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+#slide3 {
+    background-image: url(/Media/bikepartsdesktopbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+#slide4 {
+    background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+#slide5 {
+    background-image: url(/Media/bikerentalsdesktopbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
 }
