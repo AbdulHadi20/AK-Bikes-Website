@@ -25,84 +25,128 @@ header {
     transition: all .50s ease;
     background-color: $color4;
     box-shadow: $shadow-settings;
-}
 
-// setting up the logo size in header
-header img {
+    // setting up the logo size in header
+    img {
     width: 110px;
     height: 120px;
-}
+    }
 
-// setting up the layout for the nav menu
-.nav-bar {
-    display: flex;
-}
+    // setting up the layout for the nav menu
+    .nav-bar {
+        display: flex;
+    }
 
-// setting up the layout for the nav menu and color
-.nav-bar a {
-    padding: 5px 10px;
-    margin: 2px 25px;
-    text-decoration: none;
-    color: $color1;
-    font-weight: bold;
-    font-size: 1.02rem;
-    border-bottom: 2px solid transparent;
-    transition: all .50s ease;
-}
+    // setting up the layout for the nav menu and color
+    .nav-bar a {
+        padding: 5px 10px;
+        margin: 2px 25px;
+        text-decoration: none;
+        color: $color1;
+        font-weight: bold;
+        font-size: 1.02rem;
+        border-bottom: 2px solid transparent;
+        transition: all .50s ease;
+    }
 
-// setting the list style of nav menu to none, to hide the bullet points
-.nav-bar li {
-    list-style: none;
-}
+    // setting the list style of nav menu to none, to hide the bullet points
+    .nav-bar li {
+        list-style: none;
+    }
 
-// setting up the hovering effect in nav menu
-.nav-bar a:hover, .icons i:hover {
-    border-bottom: 1px solid $color1;
-}
+    // setting up the hovering effect in nav menu
+    .nav-bar a:hover, .icons i:hover {
+        border-bottom: 1px solid $color1;
+    }
 
-// setting up the layout for the icons
-.icons i {
-    color: $color1;
-    padding: 5px 10px;
-    font-size: 1.02rem;
-    border-bottom: 2px solid transparent;
-    transition: all .50s ease;
-}
+    // setting up the layout for the icons
+    .icons {
+        display: flex;
+    }
 
+    .icons i {
+        color: $color1;
+        padding: 5px 10px;
+        font-size: 1.02rem;
+        border-bottom: 2px solid transparent;
+        transition: all .50s ease;
+    }   
 
-// setting up
-.icons #search {
-    position: absolute;
-}
+    .search-box {
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
 
-// setting up the search bar input text
-.icons input {
-    border: none;
-    border-radius: 20px;
-    padding: 5px 100px;
-    transition: width .50s ease, padding .50s ease;
-    opacity: 0;
+    .input-search {
+        width: 200px;
+        font-size: 1.002rem;
+        border-style: none;
+        border-radius: 10px;
+        text-align: center;
+        outline: none;
+        transition: all .5s ease-in-out;
+    }
 
-    &.expanded {
-        width: 300px;
-        opacity: 1;
+    .input-search::placeholder {
+        color: $color1;
+    }
+
+    .search-box:focus ~ .input-search {
+        width: 200px;
+        transition: all 500ms;
+    }
+
+    .input-search:focus {
+        width: 200px;
+        transition: all 500ms;
     }
 }
 
 
 // setting up the hero section
 .slideshow {
-    margin: auto;
-    padding: 0;
-    display: inline-block;
     overflow: hidden;
 }
 
-.slides {
-    margin: auto;
-    padding: 0;
-    display: inline-block;
-    overflow: hidden;
+.slideshow .slides {
+    position: relative;
+    width: 100%;
+    margin: 0; 
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+// setting the background images for all slides
+.slide1 {
+    background-image: url(/Media/salesherobanner.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide2 {
+    background-image: url(/Media/slide1banner.png);
+    background-size: contain;
+}
+
+.slide3 {
+    background-image: url(/Media/bikepartsdesktopbanner.png);
+    background-size: contain;
+}
+
+.slide4 {
+    background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
+    background-size: contain;
+}
+
+.slide5 {
+    background-image: url(/Media/bikerentalsdesktopbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
 }
 
 .slides h4 {
@@ -139,47 +183,6 @@ button:hover {
     transition: all 0.5s ease;
 }
 
-// setting the background images for all slides
-#slide1 {
-    background-image: url(/Media/salesherobanner.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-}
-
-#slide2 {
-    background-image: url(/Media/slide1banner.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-}
-
-#slide3 {
-    background-image: url(/Media/bikepartsdesktopbanner.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-}
-
-#slide4 {
-    background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-}
-
-#slide5 {
-    background-image: url(/Media/bikerentalsdesktopbanner.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-}
-
 .shopcontainer {
     display: flex;
     justify-content: space-between;
@@ -193,7 +196,6 @@ button:hover {
     height: 400px;
     background-color: #FCE8D2;
     text-align: center;
-    color: $color5;
     box-sizing: border-box;
     border-radius: 20px;
     box-shadow: $shadow-settings;
@@ -205,11 +207,12 @@ button:hover {
 }
 
 .bikerentals {
-    background-image: url(/Media/bikerentalsdesktopbanner.png);
+    background-image: url(/Media/bikesrentalbanner.jpg);
     background-size: contain;
 }
 
 .bikeservices {
-    background-image: url(/Media/bikesrentalbanner.jpg);
+    background-image: url(/Media/bikeservicesbannerimg.png);
     background-size: contain;
 }
+

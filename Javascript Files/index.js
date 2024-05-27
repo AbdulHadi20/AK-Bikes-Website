@@ -1,5 +1,5 @@
-/*unction toggleSearchBar() {
-    const searchBar = document.getElementsByClassName('searchbar');
+function toggleSearchBar() {
+    const searchBar = document.getElementsByClassName('searchBar');
     const searchIcon = document.getElementById('search');
 
     searchBar.classList.add('expanded');
@@ -8,13 +8,13 @@
 }
 
 function hideSearchBar() {
-    const searchBar = document.getElementsByClassName('searchbar');
+    const searchBar = document.getElementsByClassName('searchBar');
     const searchIcon = document.getElementById('search');
     searchBar.classList.remove('expanded');
     searchIcon.style.display = 'block';
 }
 
-/*let slideIndex = 0;
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
@@ -24,7 +24,7 @@ function showSlides() {
     if (slideIndex >= totalSlides) {
         slideIndex = 0
     } slides.style.transform = "translateX(" + (-slideIndex * 100) + "%)";
-    setTimeout(showSlides, 5000);
+    setTimeout(showSlides, 300);
 
-}*/
+}
 

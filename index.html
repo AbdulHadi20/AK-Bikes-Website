@@ -24,7 +24,11 @@
         </ul>
 
         <div class="icons">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
+            <div class="search-box">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
+                <input type="text" class="input-search" placeholder="Search...">
+                
+            </div>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
             <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
         </div>
@@ -33,34 +37,37 @@
 
    <div class="slideshow">
 
-    <div class="slides" id="slide1">
-        <h4>Find Your Passion</h4>
-        <h1>Discover Your Ride</h1>
-        <a href="#"><button type="button">Shop Bikes</button></a>
-    </div>
+    <div class="slides">
+        <div class="slide1">    
+            <h4>Find Your Passion</h4>
+            <h1>Discover Your Ride</h1>
+            <a href="#"><button type="button">Shop Bikes</button></a>
+        </div>
+    
+        <div class="slide2">
+            <h4>Introducing Our</h4>
+            <h1>Ultimate Bike Service Kit</h1>
+            <a href="#"><button type="button">Book Service</button></a>
+        </div>
+    
+        <div class="slide3">
+            <h4>Elevate Your Ride</h4>
+            <h1>Elite Components</h1>
+            <a href="#"><button type="button">Shop Parts</button></a>
+        </div>
+    
+        <div class="slide4">
+            <h4>Personalize your ride</h4>
+            <h1>Essential Accessories</h1>
+            <a href="#"><button type="button">Shop Accessories</button></a>
+        </div>
+    
+        <div class="slide5">
+            <h4>Bike Rentals</h4>
+            <h1>Gear Up, Ride Out, Explore More!</h1>
+            <a href="#"><button type="button">Bike Rentals</button></a>
+        </div>
 
-    <div class="slides" id="slide2">
-        <h4>Introducing Our</h4>
-        <h1>Ultimate Bike Service Kit</h1>
-        <a href="#"><button type="button">Book Service</button></a>
-    </div>
-
-    <div class="slides" id="slide3">
-        <h4>Elevate Your Ride</h4>
-        <h1>Elite Components</h1>
-        <a href="#"><button type="button">Shop Parts</button></a>
-    </div>
-
-    <div class="slides" id="slide4">
-        <h4>Personalize your ride</h4>
-        <h1>Essential Accessories</h1>
-        <a href="#"><button type="button">Shop Accessories</button></a>
-    </div>
-
-    <div class="slides" id="slide5">
-        <h4>Bike Rentals</h4>
-        <h1>Gear Up, Ride Out, Explore More!</h1>
-        <a href="#"><button type="button">Bike Rentals</button></a>
     </div>
 
    </div>
@@ -68,9 +75,11 @@
    <section>
     <div class="shopcontainer">
 
-        <div class="bikeshop">
-            <h1>Shop Bikes</h1>
-        </div>
+        <a href="#">
+            <div class="bikeshop">
+                <h1>Bike Shop</h1>
+            </div>
+        </a>
 
         <div class="bikeservices">
             <h1>Bike Services</h1>
@@ -83,6 +92,6 @@
    </section>
     
 
-    <script src="Javascript Files/index.js"></script>
+    
 </body>
 </html>
