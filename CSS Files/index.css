@@ -4,6 +4,10 @@
   font-family: "Mulish", sans-serif;
 }
 
+body {
+  background-color: #FFFBF6;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -14,8 +18,8 @@ header {
   box-shadow: 14px 0px 9.3000001907px 10px rgba(0, 0, 0, 0.25);
 }
 header img {
-  width: 110px;
-  height: 120px;
+  width: 100px;
+  height: 110px;
 }
 header .nav-bar {
   display: flex;
@@ -75,76 +79,95 @@ header .input-search:focus {
   transition: all 500ms;
 }
 
-.slideshow {
+main {
   overflow: hidden;
-}
-
-.slideshow .slides {
   position: relative;
-  width: 100%;
-  margin: 0;
-  left: 0;
-  animation: 20s slider infinite;
+  margin: auto;
+  max-width: 100%;
+  /* setting the background images for all slides */
 }
-
-.slide1 {
+main .slides {
+  display: none;
+  position: relative;
+}
+main .slides::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+main .slide1, main .slide2, main .slide3, main .slide4, main .slide5 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+}
+main img {
+  vertical-align: middle;
+}
+main .slide1 {
   background-image: url(/Media/salesherobanner.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
 }
-
-.slide2 {
+main .slide2 {
   background-image: url(/Media/slide1banner.png);
   background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
-
-.slide3 {
+main .slide3 {
   background-image: url(/Media/bikepartsdesktopbanner.png);
   background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
-
-.slide4 {
+main .slide4 {
   background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
   background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
-
-.slide5 {
+main .slide5 {
   background-image: url(/Media/bikerentalsdesktopbanner.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
 }
-
-.slides h4 {
-  font-size: 25px;
-  color: #FFFBF6;
-  margin: 0px 120px;
+main h4, main h1, main button {
+  color: #fff;
+  margin: 0px 100px;
+  padding: 20px 0px;
+  position: relative;
+  z-index: 2;
+}
+main h4 {
   margin-top: 200px;
-  padding: 10px;
+  font-size: 18px;
 }
-
-.slides h1 {
+main h1 {
   font-size: 70px;
-  color: #FFFBF6;
-  margin: 0px 120px;
-  padding: 10px;
 }
-
-button {
+main button {
   background-color: #DA7A04;
   border-radius: 30px;
   padding: 20px;
-  color: #FFFBF6;
   font-size: 18px;
   font-weight: bold;
   border: none;
-  margin: 50px 130px;
 }
-
-button:hover {
+main button:hover {
   background-color: #FFFBF6;
   color: #DA7A04;
   cursor: pointer;
@@ -152,35 +175,275 @@ button:hover {
   transition: all 0.5s ease;
 }
 
-.shopcontainer {
+section .shopcontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px 40px;
   padding: 10px 15px;
 }
-
-.bikeshop, .bikerentals, .bikeservices {
+section .shopcontainer a {
+  text-decoration: none;
+  color: #FFFBF6;
+  font-size: 30px;
+}
+section .bikeshop, section .bikerentals, section .bikeservices {
   width: 400px;
   height: 400px;
   background-color: #FCE8D2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   box-sizing: border-box;
   border-radius: 20px;
   box-shadow: 14px 0px 9.3000001907px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  color: #FFFBF6;
 }
-
-.bikeshop {
+section .bikeshop::before, section .bikerentals::before, section .bikeservices::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+  border-radius: 20px;
+}
+section .bikeshop h1, section .bikerentals h1, section .bikeservices h1 {
+  position: relative;
+  z-index: 2;
+  color: #FFFBF6;
+}
+section .bikeshop {
   background-image: url(/Media/bikesalesbannerimg.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
-
-.bikerentals {
+section .bikerentals {
   background-image: url(/Media/bikesrentalbanner.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
+}
+section .bikeservices {
+  background-image: url(/Media/bikeservicesbannerimg.png);
+  background-size: cover;
+  background-position: center;
 }
 
-.bikeservices {
-  background-image: url(/Media/bikeservicesbannerimg.png);
-  background-size: contain;
+.headings {
+  text-align: center;
+  margin-top: 130px;
+  color: #DA7A04;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.featuredprods {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 120px;
+}
+.featuredprods .cards {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  width: -moz-min-content;
+  width: min-content;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 14px 0px 9.3000001907px 10px rgba(0, 0, 0, 0.25);
+}
+.featuredprods .cards img {
+  width: 320px;
+  height: 260px;
+  border-radius: 15px;
+  margin-top: -10px;
+}
+.featuredprods .cards h2 {
+  font-size: 26px;
+  color: #222222;
+  text-align: left;
+  font-weight: bold;
+  padding: 5px;
+}
+.featuredprods .cards p {
+  font-size: 20px;
+  color: #222222;
+  text-align: left;
+  padding: 5px;
+}
+.featuredprods .cards a {
+  text-decoration: none;
+  color: #FFFBF6;
+  font-size: 18px;
+}
+.featuredprods .cards a button {
+  background-color: #DA7A04;
+  color: #FFFBF6;
+  padding: 10px 15px;
+  margin: 5px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 15px;
+  margin-top: 35px;
+}
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+}
+.blogs-container .blogs {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+}
+.blogs-container .blogs .blog1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: justify;
+  padding: 10px;
+  margin-top: 50px;
+  margin: 10px;
+}
+.blogs-container .blogs .blog1 h2 {
+  color: #222222;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.blogs-container .blogs .blog1 p {
+  font-size: 14px;
+  color: #222222;
+  margin-top: 30px;
+}
+.blogs-container .blogs .blog1 button {
+  background-color: #DA7A04;
+  color: #FFFBF6;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 15px;
+  margin-top: 35px;
+}
+
+#lables {
+  margin: 30px;
+  padding: 20px;
+}
+#lables .sub-labels {
+  display: flex;
+  justify-content: space-around;
+}
+#lables .sub-labels .label1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.footer {
+  background-color: #222222;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-logo-container {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-width: 150px; /* Adjust size as needed */
+  height: auto;
+  display: block; /* Ensures the image is a block element */
+  margin: 0 auto; /* Centers the logo horizontally */
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 25%; /* Each column takes up 25% of the width */
+  padding: 0 10px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  position: relative; /* Required for pseudo-element */
+}
+
+.footer-column:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0; /* Added to stretch the line to the bottom */
+  width: 1px;
+  background-color: #DA7A04;
+}
+
+.navmenu, address {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navmenu li {
+  margin-bottom: 5px;
+}
+
+.navmenu li a {
+  text-decoration: none;
+  color: #DA7A04;
+}
+
+.navmenu li a:hover {
+  text-decoration: underline;
+}
+
+.text {
+  font-size: 20px;
+  font-style: italic;
+  color: #DA7A04;
+}
+
+/* Container for icons */
+.iconstyle {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: center; /* Align icons horizontally */
+  align-items: center; /* Center icons vertically */
+}
+
+/* Style individual icon links */
+.iconstyle a {
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Style icon elements */
+.iconstyle i {
+  font-size: 24px; /* Adjust icon size */
+  color: #DA7A04; /* Default icon color */
+  transition: transform color 1s ease; /* Add transition effect for zooming */
+}
+
+/* Hover effect for icon links */
+.iconstyle a:hover i {
+  transform: scale(1.4); /* Zoom in on hover */
+  color: #FFFBF6;
+}
+
+.copyright {
+  position: relative;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #DA7A04;
 }/*# sourceMappingURL=index.css.map */

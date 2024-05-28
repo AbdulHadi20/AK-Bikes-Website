@@ -13,6 +13,10 @@ $font: 'Mulish', sans-serif;
     font-family: $font;
 }
 
+body {
+    background-color: $color5;
+}
+
 
 //.........................HEADER STYLING...................................//
 
@@ -28,8 +32,8 @@ header {
 
     // setting up the logo size in header
     img {
-    width: 110px;
-    height: 120px;
+    width: 100px;
+    height: 110px;
     }
 
     // setting up the layout for the nav menu
@@ -105,21 +109,44 @@ header {
 
 
 // setting up the hero section
-.slideshow {
+main {
     overflow: hidden;
-}
-
-.slideshow .slides {
     position: relative;
-    width: 100%;
-    margin: 0; 
-    left: 0;
-    animation: 20s slider infinite;
+    margin: auto;
+    max-width: 100%;
+
+    .slides {
+        display: none;
+        position: relative;
+    }
+
+    .slides::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 78%;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 1;
+    }
+
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        position: relative;
+        z-index: 0;
+    }
+
+    
+img {
+    vertical-align: middle;
 }
 
-// setting the background images for all slides
+/* setting the background images for all slides */
 .slide1 {
-    background-image: url(/Media/salesherobanner.jpg);
+    background-image: url(/Media/salesherobanner.jpg); 
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -129,16 +156,25 @@ header {
 .slide2 {
     background-image: url(/Media/slide1banner.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }
 
 .slide3 {
     background-image: url(/Media/bikepartsdesktopbanner.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }
 
 .slide4 {
     background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }
 
 .slide5 {
@@ -149,30 +185,30 @@ header {
     width: 100%;
 }
 
-.slides h4 {
-    font-size: 25px;
-    color: $color5;
-    margin: 0px 120px;
-    margin-top: 200px;
-    padding: 10px;
+h4, h1, button {
+    color: #fff;
+    margin: 0px 100px;
+    padding: 20px 0px;
+    position: relative;
+    z-index: 2;
 }
 
-.slides h1 {
+h4 {
+    margin-top: 200px;
+    font-size: 18px;
+}
+
+h1 {
     font-size: 70px;
-    color: $color5;
-    margin: 0px 120px;
-    padding: 10px;
 }
 
 button {
     background-color: $color1;
     border-radius: 30px;
     padding: 20px;
-    color: $color5;
     font-size: 18px;
     font-weight: bold;
     border: none;
-    margin: 50px 130px;
 }
 
 button:hover {
@@ -182,37 +218,300 @@ button:hover {
     border: $color1 1px solid;
     transition: all 0.5s ease;
 }
+}
 
-.shopcontainer {
+
+section {
+    .shopcontainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 40px;
+        padding: 10px 15px;
+    }
+
+    .shopcontainer a {
+        text-decoration: none;
+        color: $color5;
+        font-size: 30px;
+    }
+    
+    .bikeshop, .bikerentals, .bikeservices {
+        width: 400px;
+        height: 400px;
+        background-color: #FCE8D2;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 20px;
+        box-shadow: $shadow-settings;
+        position: relative; 
+        color: $color5;
+    }
+    
+    .bikeshop::before, .bikerentals::before, .bikeservices::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 1;
+        border-radius: 20px;
+    }
+    
+    .bikeshop h1, .bikerentals h1, .bikeservices h1 {
+        position: relative;
+        z-index: 2; 
+        color: $color5;
+    }
+
+    .bikeshop {
+        background-image: url(/Media/bikesalesbannerimg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .bikerentals {
+        background-image: url(/Media/bikesrentalbanner.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .bikeservices {
+        background-image: url(/Media/bikeservicesbannerimg.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.headings {
+    text-align: center;
+    margin-top: 130px;
+    color: $color1;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.featuredprods {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+    .cards {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        width: min-content;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 15px;
+        box-shadow: $shadow-settings;
+
+        img {
+            width: 320px;
+            height: 260px;
+            border-radius: 15px;
+            margin-top: -10px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: $color4;
+            text-align: left;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 20px;
+            color: $color4;
+            text-align: left;
+            padding: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color5;
+            font-size: 18px;
+
+            button {
+                background-color: $color1;
+                color: $color5;
+                padding: 10px 15px;
+                margin: 5px;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 15px;
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+.blogs-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+
+    .blogs {
+        display: flex;
+        margin: 20px;
+        padding: 20px;
+        
+
+        .blog1 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: justify;
+            padding: 10px;
+            margin-top: 50px;
+            margin: 10px;
+    
+            h2 {
+                color: $color4;
+                font-size: 30px;
+                margin-top: 20px;
+            }
+    
+            p {
+                font-size: 14px;
+                color: $color4;
+                margin-top: 30px; 
+            }
+
+            button {
+                background-color: $color1;
+                color: $color5;
+                padding: 10px 15px;     
+                box-sizing: border-box;
+                border: none;
+                border-radius: 15px;
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+#lables {
+    margin: 30px;
+    padding: 20px;
+
+    .sub-labels {
+        display: flex;
+        justify-content: space-around;
+
+        .label1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+    }
+}
+
+.footer {
+    background-color: $color4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-logo-container {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the logo horizontally */
+}
+
+.footer-columns {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 30px 40px;
-    padding: 10px 15px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
 }
 
-.bikeshop, .bikerentals, .bikeservices {
-    width: 400px;
-    height: 400px;
-    background-color: #FCE8D2;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 20px;
-    box-shadow: $shadow-settings;
+.footer-column {
+    flex: 1;
+    max-width: 25%; /* Each column takes up 25% of the width */
+    padding: 0 10px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    position: relative; /* Required for pseudo-element */
 }
 
-.bikeshop {
-    background-image: url(/Media/bikesalesbannerimg.jpg);
-    background-size: contain;
+.footer-column:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; /* Added to stretch the line to the bottom */
+    width: 1px;
+    background-color: $color1;
 }
 
-.bikerentals {
-    background-image: url(/Media/bikesrentalbanner.jpg);
-    background-size: contain;
+.navmenu, address {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.bikeservices {
-    background-image: url(/Media/bikeservicesbannerimg.png);
-    background-size: contain;
+.navmenu li {
+    margin-bottom: 5px;
 }
 
+.navmenu li a {
+    text-decoration: none;
+    color: $color1;
+}
+
+.navmenu li a:hover {
+    text-decoration: underline;
+}
+
+.text {
+    font-size: 20px;
+    font-style: italic;
+    color: $color1;
+}
+
+/* Container for icons */
+.iconstyle {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Align icons horizontally */
+    align-items: center; /* Center icons vertically */
+  }
+  
+  /* Style individual icon links */
+  .iconstyle a {
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add spacing between icons */
+  }
+  
+  /* Style icon elements */
+  .iconstyle i {
+    font-size: 24px; /* Adjust icon size */
+    color: $color1; /* Default icon color */
+    transition: transform color 1s ease; /* Add transition effect for zooming */
+  }
+  
+  /* Hover effect for icon links */
+  .iconstyle a:hover i {
+    transform: scale(1.4); /* Zoom in on hover */
+    color: $color5;
+  }
+
+.copyright {
+    position: relative;
+    font-size: 12px;
+    margin-top: 20px;
+    color: $color1;
+}

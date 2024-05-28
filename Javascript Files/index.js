@@ -1,30 +1,15 @@
-function toggleSearchBar() {
-    const searchBar = document.getElementsByClassName('searchBar');
-    const searchIcon = document.getElementById('search');
-
-    searchBar.classList.add('expanded');
-    searchIcon.style.display = 'none';
-    searchBar.focus();
-}
-
-function hideSearchBar() {
-    const searchBar = document.getElementsByClassName('searchBar');
-    const searchIcon = document.getElementById('search');
-    searchBar.classList.remove('expanded');
-    searchIcon.style.display = 'block';
-}
-
+/* scripts.js */
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    let slides = document.getElementsByClassName("slideshow")[0];
-    let totalSlides = document.getElementsByClassName("slides").length;
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
     slideIndex++;
-    if (slideIndex >= totalSlides) {
-        slideIndex = 0
-    } slides.style.transform = "translateX(" + (-slideIndex * 100) + "%)";
-    setTimeout(showSlides, 300);
-
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "flex";
+    setTimeout(showSlides, 3000); // Change image every 5 seconds
 }
-
