@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile Page</title>
-    <link rel="stylesheet" href="CSS Files/profile.css">
+    <title>Creative Profile Page</title>
+    <link rel="stylesheet" href="/Pages/CSS Files/profile.css">
 </head>
 <body>
     <div class="profile-container">
         <div class="profile-header">
-            <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-            <h1 class="profile-name" id="profileName">John Doe</h1>
+            <img src="/Media/profile-pic.jpg" alt="Profile Picture" class="profile-pic" id="profilePic">
+            <h1 class="profile-name" id="profileName">User#001</h1>
         </div>
         <div class="profile-bio" id="profileBio">
-            <p>Hello! I'm John, a web developer with a passion for creating beautiful and functional websites. I love coding, hiking, and coffee.</p>
+            <p class="pbio">Input a bio</p>
         </div>
         <div class="profile-interactions">
             <button onclick="editProfile()">Edit Profile</button>
         </div>
+        <div class="profile-interactions2">
+            <a href="/index.html"><button onclick="logout()">Logout</button></a>
+        </div>
         <div id="editProfileForm" class="edit-form" style="display: none;">
+            <label for="newProfilePic">Profile Picture:</label>
+            <input type="file" id="newProfilePic" accept="image/*" onchange="previewProfilePic(event)">
+            
             <label for="newName">Name:</label>
-            <input type="text" id="newName">
+            <input type="text" id="newName" placeholder="Enter new name">
             
             <label for="newBio">Bio:</label>
-            <textarea id="newBio"></textarea>
+            <textarea id="newBio" placeholder="Enter new bio"></textarea>
             
             <button onclick="saveProfile()">Save</button>
         </div>
     </div>
 
-    <script src="profile.js"></script>
+    <script src="/Pages/Javascript Files/profile.js"></script>
 </body>
 </html>
