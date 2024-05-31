@@ -141,6 +141,8 @@ body {
     transform: translateY(-2px);
 }
 
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .profile-container {
