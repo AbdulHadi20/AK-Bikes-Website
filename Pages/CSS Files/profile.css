@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("/Media/bg-login.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/bg-login.jpg");
     font-family: 'Arial', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .pbio {
     color: #DA7A04;
 }
+
 .profile-container {
     background-color: rgb(255, 234, 215) transparent;
     padding: 20px;
@@ -28,6 +29,8 @@ body {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border: 3px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 300px;
+    margin-top: 300px;
 }
 
 @keyframes fadeIn {
@@ -39,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -84,6 +88,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.5s;
 }
+
 .profile-interactions2 button {
     background-color: #FCE8D2;
     color: #DA7A04;
@@ -95,7 +100,8 @@ body {
     transition: background-color 0.3s, transform 0.5s;
 }
 
-.profile-interactions button:hover, .profile-interactions2 button:hover {
+.profile-interactions button:hover,
+.profile-interactions2 button:hover {
     background-color: #DA7A04;
     border: none;
     color: #fff;
@@ -139,6 +145,106 @@ body {
     border: none;
     color: #fff;
     transform: translateY(-2px);
+}
+
+.footer {
+    background-color: #222222;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-logo-container {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the logo horizontally */
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 25%; /* Each column takes up 25% of the width */
+    padding: 0 10px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    position: relative; /* Required for pseudo-element */
+}
+
+.footer-column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; /* Added to stretch the line to the bottom */
+    width: 1px;
+    background-color: #DA7A04;
+}
+
+.navmenu, address {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navmenu li {
+    margin-bottom: 5px;
+}
+
+.navmenu li a {
+    text-decoration: none;
+    color: #DA7A04;
+}
+
+.navmenu li a:hover {
+    text-decoration: underline;
+}
+
+.text {
+    font-size: 20px;
+    font-style: italic;
+    color: #DA7A04;
+}
+
+/* Container for icons */
+.iconstyle {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Align icons horizontally */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Style individual icon links */
+.iconstyle a {
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Style icon elements */
+.iconstyle i {
+    font-size: 24px; /* Adjust icon size */
+    color: #DA7A04; /* Default icon color */
+    transition: transform color 1s ease; /* Add transition effect for zooming */
+}
+
+/* Hover effect for icon links */
+.iconstyle a:hover i {
+    transform: scale(1.4); /* Zoom in on hover */
+    color: #FFFBF6;
+}
+
+.copyright {
+    position: relative;
+    font-size: 12px;
+    margin-top: 20px;
+    color: #DA7A04;
 }
 
 /* Media Queries */
