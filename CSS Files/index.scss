@@ -218,8 +218,8 @@ button:hover {
     border: $color1 1px solid;
     transition: all 0.5s ease;
 }
-}
 
+}
 
 section {
     .shopcontainer {
@@ -228,6 +228,12 @@ section {
         align-items: center;
         margin: 30px 40px;
         padding: 10px 15px;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 
     .shopcontainer a {
@@ -294,12 +300,26 @@ section {
     color: $color1;
     font-size: 70px;
     font-weight: bold;
+    
+    @media (max-width: 800px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 35px;
+    }
 }
 
 .featuredprods {
     display: flex;
     justify-content: space-around;
     margin-top: 120px;
+
+     @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+     }
     .cards {
         display: flex;
         flex-direction: column;
@@ -361,6 +381,12 @@ section {
         display: flex;
         margin: 20px;
         padding: 20px;
+        
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+        }
+
         
 
         .blog1 {
