@@ -71,10 +71,10 @@ header .search-box .input-search {
   visibility: hidden;
 }
 header .search-box .input-search::-moz-placeholder {
-  color: #DA7A04;
+  color: #949494;
 }
 header .search-box .input-search::placeholder {
-  color: #DA7A04;
+  color: #949494;
 }
 header .search-box .input-search.hidden {
   width: 0;
