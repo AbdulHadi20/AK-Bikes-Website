@@ -50,7 +50,6 @@ header {
         font-size: 1.02rem;
         border-bottom: 2px solid transparent;
         transition: all .50s ease;
-
         &:hover {
           border-bottom: 1px solid #DA7A04;
         }
@@ -93,7 +92,7 @@ header {
       visibility: hidden;
 
       &::placeholder {
-        color: #DA7A04;
+        color: #949494;
       }
 
       &.hidden {
