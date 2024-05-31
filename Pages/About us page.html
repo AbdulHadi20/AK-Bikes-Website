@@ -11,23 +11,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header> 
+  <header>
     <a href="index.html"><img src="mainlogo.png" alt="logo" id="logo"></a>
-    
-    <ul class="nav-bar">
-        <li><a href="/Pages/shop.html">Shop</a></li>
-        <li><a href="Services page.html">Services</a></li>
-        <li><a href="/Pages/rentals.html">Rentals</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="About us page.html">About Us</a></li>
-    </ul>
+    <div id="hamburger-icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></div> <!-- Hamburger Menu Icon -->
 
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
-        <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
-        <div class="search-box">
-            <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
-            <input type="text" class="input-search hidden" placeholder="Search...">
+    <div class="menu-content hidden"> <!-- Container for items to hide/show -->
+        <ul class="nav-bar">
+            <li><a href="/Pages/shop.html">Shop</a></li>
+            <li><a href="Services page.html">Services</a></li>
+            <li><a href="/Pages/rentals.html">Rentals</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="About us page.html">About Us</a></li>
+        </ul>
+
+        <div class="icons">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
+            <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
         </div>
     </div>
 </header>

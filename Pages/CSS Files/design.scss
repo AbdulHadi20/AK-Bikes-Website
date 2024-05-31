@@ -50,6 +50,7 @@ header {
         font-size: 1.02rem;
         border-bottom: 2px solid transparent;
         transition: all .50s ease;
+
         &:hover {
           border-bottom: 1px solid #DA7A04;
         }
@@ -82,7 +83,6 @@ header {
       width: 0;
       padding: 5px 10px;
       font-size: 1.002rem;
-      color: #747474;
       border-style: none;
       border-radius: 10px;
       text-align: center;
@@ -92,7 +92,7 @@ header {
       visibility: hidden;
 
       &::placeholder {
-        color: #949494;
+        color: #9f9f9f;
       }
 
       &.hidden {
