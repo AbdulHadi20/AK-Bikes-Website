@@ -17,3 +17,5 @@ function hideSearchBar() {
   searchBar.classList.remove('expanded');
   searchIcon.style.display = 'block';
 }
+
+

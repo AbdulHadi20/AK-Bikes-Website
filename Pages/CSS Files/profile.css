@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("/Media/bg-login.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/bg-login.jpg");
     font-family: 'Arial', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .pbio {
     color: #DA7A04;
 }
+
 .profile-container {
     background-color: rgb(255, 234, 215) transparent;
     padding: 20px;
@@ -28,6 +29,8 @@ body {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border: 3px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 300px;
+    margin-top: 300px;
 }
 
 @keyframes fadeIn {
@@ -39,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -84,6 +88,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.5s;
 }
+
 .profile-interactions2 button {
     background-color: #FCE8D2;
     color: #DA7A04;
@@ -95,7 +100,8 @@ body {
     transition: background-color 0.3s, transform 0.5s;
 }
 
-.profile-interactions button:hover, .profile-interactions2 button:hover {
+.profile-interactions button:hover,
+.profile-interactions2 button:hover {
     background-color: #DA7A04;
     border: none;
     color: #fff;
@@ -140,8 +146,6 @@ body {
     color: #fff;
     transform: translateY(-2px);
 }
-
-
 
 /* Media Queries */
 @media (max-width: 768px) {
