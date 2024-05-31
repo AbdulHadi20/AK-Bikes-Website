@@ -20,6 +20,12 @@ header img {
   width: 100px;
   height: 110px;
 }
+header .hamburger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #da7a04;
+}
 header .nav-bar {
   display: flex;
 }
@@ -30,27 +36,27 @@ header .nav-bar li a {
   padding: 5px 10px;
   margin: 2px 25px;
   text-decoration: none;
-  color: #DA7A04;
+  color: #da7a04;
   font-weight: bold;
   font-size: 1.02rem;
   border-bottom: 2px solid transparent;
   transition: all 0.5s ease;
 }
 header .nav-bar li a:hover {
-  border-bottom: 1px solid #DA7A04;
+  border-bottom: 1px solid #da7a04;
 }
 header .icons {
   display: flex;
 }
 header .icons i {
-  color: #DA7A04;
+  color: #da7a04;
   padding: 5px 10px;
   font-size: 1.02rem;
   border-bottom: 2px solid transparent;
   transition: all 0.5s ease;
 }
 header .icons i:hover {
-  border-bottom: 1px solid #DA7A04;
+  border-bottom: 1px solid #da7a04;
 }
 header .search-box {
   display: flex;
@@ -61,7 +67,6 @@ header .search-box .input-search {
   width: 0;
   padding: 5px 10px;
   font-size: 1.002rem;
-  color: #747474;
   border-style: none;
   border-radius: 10px;
   text-align: center;
@@ -71,10 +76,10 @@ header .search-box .input-search {
   visibility: hidden;
 }
 header .search-box .input-search::-moz-placeholder {
-  color: #949494;
+  color: #9f9f9f;
 }
 header .search-box .input-search::placeholder {
-  color: #949494;
+  color: #9f9f9f;
 }
 header .search-box .input-search.hidden {
   width: 0;
@@ -90,11 +95,55 @@ header .search-box a {
   margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .hamburger-menu {
+    display: block;
+  }
+  header .nav-bar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .nav-bar.active {
+    display: flex;
+  }
+  header .nav-bar li {
+    margin: 10px 0;
+  }
+  header .nav-bar li a {
+    font-size: 1.2rem;
+  }
+  header .icons {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+  }
+  header .icons i {
+    text-align: center;
+    margin: 0 15px;
+  }
+  header .search-box {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
 .con {
   max-width: 700px;
   margin: 100px auto 20px auto;
   padding: 20px;
-  background-color: rgba(255, 226, 179, 0.414), transparent;
+  background-color: rgba(255, 226, 179, 0.414);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   border-radius: 8px;
@@ -228,7 +277,10 @@ header .search-box a {
   color: #333;
 }
 
-.our-services .service-container .servicecon1, .servicecon2, .servicecon3, .servicecon4 {
+.our-services .service-container .servicecon1,
+.servicecon2,
+.servicecon3,
+.servicecon4 {
   max-width: 700px;
   width: 300px;
   font-size: 25px;
@@ -239,7 +291,10 @@ header .search-box a {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
-.our-services .service-container .servicecon1:hover, .servicecon2:hover, .servicecon3:hover, .servicecon4:hover {
+.our-services .service-container .servicecon1:hover,
+.servicecon2:hover,
+.servicecon3:hover,
+.servicecon4:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
@@ -391,18 +446,17 @@ header .search-box a {
 }
 
 main {
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
   margin-top: -40px;
   height: 3500px;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
-  color: #DA7A04;
+  color: #da7a04;
   line-height: 2;
 }
 
@@ -418,24 +472,24 @@ body, html {
 }
 
 .footer-logo {
-  max-width: 150px; /* Adjust size as needed */
+  max-width: 150px;
   height: auto;
-  display: block; /* Ensures the image is a block element */
-  margin: 0 auto; /* Centers the logo horizontally */
+  display: block;
+  margin: 0 auto;
 }
 
 .footer-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .footer-column {
   flex: 1;
-  max-width: 25%; /* Each column takes up 25% of the width */
+  max-width: 25%;
   padding: 0 10px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
-  position: relative; /* Required for pseudo-element */
+  box-sizing: border-box;
+  position: relative;
 }
 
 .footer-column:not(:last-child)::after {
@@ -443,12 +497,13 @@ body, html {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0; /* Added to stretch the line to the bottom */
+  bottom: 0;
   width: 1px;
-  background-color: #DA7A04;
+  background-color: #da7a04;
 }
 
-.navmenu, address {
+.navmenu,
+address {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -460,7 +515,7 @@ body, html {
 
 .navmenu li a {
   text-decoration: none;
-  color: #DA7A04;
+  color: #da7a04;
 }
 
 .navmenu li a:hover {
@@ -472,30 +527,26 @@ body, html {
   font-style: italic;
 }
 
-/* Container for icons */
 .iconstyle {
-  display: flex; /* Use flexbox for horizontal alignment */
-  justify-content: center; /* Align icons horizontally */
-  align-items: center; /* Center icons vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style individual icon links */
 .iconstyle a {
-  text-decoration: none; /* Remove underline */
-  margin: 0 10px; /* Add spacing between icons */
+  text-decoration: none;
+  margin: 0 10px;
 }
 
-/* Style icon elements */
 .iconstyle i {
-  font-size: 24px; /* Adjust icon size */
-  color: #fff; /* Default icon color */
-  transition: transform color 1s ease; /* Add transition effect for zooming */
+  font-size: 24px;
+  color: #fff;
+  transition: transform color 1s ease;
 }
 
-/* Hover effect for icon links */
 .iconstyle a:hover i {
-  transform: scale(1.4); /* Zoom in on hover */
-  color: #DA7A04;
+  transform: scale(1.4);
+  color: #da7a04;
 }
 
 .copyright {
@@ -509,21 +560,31 @@ body, html {
     flex-direction: column;
     align-items: center;
   }
-  header img {
-    margin-bottom: 10px;
-    width: 100px;
-    height: 110px;
-  }
-  header .nav-bar {
-    width: 100%;
-    order: 2;
-  }
   header .icons {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    order: 3;
+    margin: 0;
+    padding: 10px 0;
+  }
+  header .icons i {
+    text-align: center;
+    margin: 0 15px;
   }
   header .search-box {
+    order: 3;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  header .nav-bar {
     order: 4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
 }/*# sourceMappingURL=design.css.map */
