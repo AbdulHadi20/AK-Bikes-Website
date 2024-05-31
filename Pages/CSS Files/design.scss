@@ -26,7 +26,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 5px 3%;
-  transition: all .50s ease;
+  transition: all 0.5s ease;
   background-color: #222222;
   box-shadow: $BS;
 
@@ -35,24 +35,31 @@ header {
     height: 110px;
   }
 
+  .hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #da7a04;
+  }
+
   .nav-bar {
     display: flex;
 
     li {
       list-style: none;
-      
+
       a {
         padding: 5px 10px;
         margin: 2px 25px;
         text-decoration: none;
-        color: #DA7A04;
+        color: #da7a04;
         font-weight: bold;
         font-size: 1.02rem;
         border-bottom: 2px solid transparent;
-        transition: all .50s ease;
+        transition: all 0.5s ease;
 
         &:hover {
-          border-bottom: 1px solid #DA7A04;
+          border-bottom: 1px solid #da7a04;
         }
       }
     }
@@ -60,16 +67,16 @@ header {
 
   .icons {
     display: flex;
-    
+
     i {
-      color: #DA7A04;
+      color: #da7a04;
       padding: 5px 10px;
       font-size: 1.02rem;
       border-bottom: 2px solid transparent;
-      transition: all .50s ease;
+      transition: all 0.5s ease;
 
       &:hover {
-        border-bottom: 1px solid #DA7A04;
+        border-bottom: 1px solid #da7a04;
       }
     }
   }
@@ -114,38 +121,91 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+
+    .hamburger-menu {
+      display: block;
+    }
+
+    .nav-bar {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &.active {
+        display: flex;
+      }
+
+      li {
+        margin: 10px 0;
+
+        a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .icons {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+
+      i {
+        text-align: center;
+        margin: 0 15px;
+      }
+    }
+
+    .search-box {
+      order: 3;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}
+
 .con {
   max-width: 700px;
-  margin: 100px auto 20px auto; // Adjusted margin for fixed header
+  margin: 100px auto 20px auto;
   padding: 20px;
-  background-color: $BGC, transparent; 
+  background-color: $BGC;
   backdrop-filter: blur(15px);
   border-radius: 8px;
   box-shadow: $BS;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; // Transition for pop-up effect
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 
   &:hover {
-    transform: scale(1.05); // Scale up on hover
-    box-shadow: $HoverBS; // Add shadow on hover
-    background: $HBGC; // Make background fully opaque on hover
+    transform: scale(1.05);
+    box-shadow: $HoverBS;
+    background: $HBGC;
   }
 
   h2 {
-    color: $C1; // Changed to primary color
-    font-size: 50px; // Increased font size
+    color: $C1;
+    font-size: 50px;
     border-bottom: 2px solid $C2;
     padding-bottom: 10px;
     text-align: center;
   }
 
   p {
-    color: $C2; // Changed to secondary color
+    color: $C2;
     margin-bottom: 20px;
     text-align: center;
   }
 
   .section {
-    margin-bottom: 40px; // Added margin to separate sections
+    margin-bottom: 40px;
 
     .about-image {
       display: block;
@@ -203,14 +263,14 @@ header {
   padding: 2rem;
   background-color: #fff, transparent;
 
-  h1{
+  h1 {
     font-size: 50px;
   }
 }
 
 .services .banner {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/banner.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 15px;
@@ -220,7 +280,6 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .services .banner .book-now {
@@ -232,7 +291,7 @@ header {
   border: none;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
     transition: 0.3s ease;
     background-color: #f4f4f4;
@@ -249,7 +308,7 @@ header {
   text-align: center;
   margin-top: -0.5px;
 
-    button{
+  button {
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 50px;
@@ -258,7 +317,7 @@ header {
     border: none;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
       transition: 0.3s ease;
       background-color: #f4f4f4;
@@ -267,40 +326,40 @@ header {
   }
 }
 
-
-
-
-.our-services .service-container .servicecon1, .servicecon2, .servicecon3, .servicecon4{
+.our-services .service-container .servicecon1,
+.servicecon2,
+.servicecon3,
+.servicecon4 {
   max-width: 700px;
   width: 300px;
   font-size: 25px;
   height: 300px;
-  margin: 100px auto 20px auto; // Adjusted margin for fixed header
+  margin: 100px auto 20px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: $BS;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; // Transition for pop-up effect
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 
   &:hover {
-    transform: scale(1.05); // Scale up on hover
-    box-shadow: $HoverBS; // Add shadow on hover
+    transform: scale(1.05);
+    box-shadow: $HoverBS;
   }
 }
 
-.servicecon1{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/washnlube.JPG');
+.servicecon1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/washnlube.JPG');
   background-size: cover;
 }
-.our-services .service-container .servicecon2{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/projectx.JPG');
+.our-services .service-container .servicecon2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/projectx.JPG');
   background-size: cover;
 }
-.our-services .service-container .servicecon3{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/projecty.JPG');
+.our-services .service-container .servicecon3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/projecty.JPG');
   background-size: cover;
 }
-.our-services .service-container .servicecon4{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/projectz.JPG');
+.our-services .service-container .servicecon4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/projectz.JPG');
   background-size: cover;
 }
 
@@ -362,7 +421,7 @@ header {
 
 .service-process .banner2 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/banner2.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner2.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -376,7 +435,7 @@ header {
 
 .service-process .banner3 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/banner3.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner3.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -390,7 +449,7 @@ header {
 
 .service-process .banner4 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/banner4.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner4.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -404,7 +463,7 @@ header {
 
 .service-process .banner5 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('D:/Web Design acts/banner5.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner5.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -427,23 +486,23 @@ header {
     font-size: 50px;
   }
 
-  h3{
+  h3 {
     font-size: 35px;
   }
 }
 
-main{
-  backdrop-filter: blur(15px);
-  margin-top: -40px ;
+main {
+  margin-top: -40px;
   height: 3500px;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Mulish', sans-serif;
-  color: #DA7A04;
+  color: #da7a04;
   line-height: 2;
 }
 
@@ -459,24 +518,24 @@ body, html {
 }
 
 .footer-logo {
-  max-width: 150px; /* Adjust size as needed */
+  max-width: 150px;
   height: auto;
-  display: block; /* Ensures the image is a block element */
-  margin: 0 auto; /* Centers the logo horizontally */
+  display: block;
+  margin: 0 auto;
 }
 
 .footer-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .footer-column {
   flex: 1;
-  max-width: 25%; /* Each column takes up 25% of the width */
+  max-width: 25%;
   padding: 0 10px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
-  position: relative; /* Required for pseudo-element */
+  box-sizing: border-box;
+  position: relative;
 }
 
 .footer-column:not(:last-child)::after {
@@ -484,12 +543,13 @@ body, html {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0; /* Added to stretch the line to the bottom */
+  bottom: 0;
   width: 1px;
-  background-color: #DA7A04;
+  background-color: #da7a04;
 }
 
-.navmenu, address {
+.navmenu,
+address {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -501,7 +561,7 @@ body, html {
 
 .navmenu li a {
   text-decoration: none;
-  color: #DA7A04;
+  color: #da7a04;
 }
 
 .navmenu li a:hover {
@@ -513,30 +573,26 @@ body, html {
   font-style: italic;
 }
 
-/* Container for icons */
 .iconstyle {
-  display: flex; /* Use flexbox for horizontal alignment */
-  justify-content: center; /* Align icons horizontally */
-  align-items: center; /* Center icons vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style individual icon links */
 .iconstyle a {
-  text-decoration: none; /* Remove underline */
-  margin: 0 10px; /* Add spacing between icons */
+  text-decoration: none;
+  margin: 0 10px;
 }
 
-/* Style icon elements */
 .iconstyle i {
-  font-size: 24px; /* Adjust icon size */
-  color: #fff; /* Default icon color */
-  transition: transform color 1s ease; /* Add transition effect for zooming */
+  font-size: 24px;
+  color: #fff;
+  transition: transform color 1s ease;
 }
 
-/* Hover effect for icon links */
 .iconstyle a:hover i {
-  transform: scale(1.4); /* Zoom in on hover */
-  color: #DA7A04;
+  transform: scale(1.4);
+  color: #da7a04;
 }
 
 .copyright {
@@ -548,27 +604,37 @@ body, html {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: center; // This will center-align all children including the logo
-
-    img {
-      margin-bottom: 10px; // Adjust spacing as needed
-      width: 100px; // Maintain or adjust logo size
-      height: 110px;
-    }
-
-    .nav-bar {
-      width: 100%; // Full width for better touch targets
-      order: 2; // Ensures navigation bar comes after the logo if needed
-    }
+    align-items: center;
 
     .icons {
-      width: 100%; // Full width for icons
-      order: 3; // Ensures icons come after the navigation bar
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+
+      i {
+        text-align: center;
+        margin: 0 15px;
+      }
     }
 
     .search-box {
-      width: 100%; // Full width search box on smaller screens
-      order: 4; // Ensures search box comes last
+      order: 3;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .nav-bar {
+      order: 4;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
     }
   }
 }

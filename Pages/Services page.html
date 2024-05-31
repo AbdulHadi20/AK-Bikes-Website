@@ -5,20 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - AK Bikes</title>
   <script src="https://kit.fontawesome.com/e5dccc8960.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="CSS Files/design.css">
+  <link rel="stylesheet" href="design.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS Files/design.css">
 </head>
 <body>
   <header> 
     <a href="index.html"><img src="mainlogo.png" alt="logo" id="logo"></a>
     
-    <ul class="nav-bar">
-        <li><a href="#">Shop</a></li>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-bar" id="nav-bar">
+        <li><a href="/Pages/shop.html">Shop</a></li>
         <li><a href="Services page.html">Services</a></li>
-        <li><a href="#">Rentals</a></li>
+        <li><a href="/Pages/rentals.html">Rentals</a></li>
         <li><a href="#">Blogs</a></li>
         <li><a href="About us page.html">About Us</a></li>
     </ul>
@@ -167,6 +170,12 @@
         }, 500); // Wait for the transition to complete before hiding
       }
     });
+
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+  const navBar = document.getElementById('nav-bar');
+  navBar.classList.toggle('active');
+});
+
   </script>
 </body>
 </html>
