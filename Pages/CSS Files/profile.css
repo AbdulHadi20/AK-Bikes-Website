@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("/Media/bg-login.jpg");
+    font-family: 'Arial', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,60 +14,104 @@ body {
     height: 100vh;
 }
 
+.pbio {
+    color: #DA7A04;
+}
 .profile-container {
-    background-color: #fff;
+    background-color: rgb(255, 234, 215) transparent;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 300px;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .profile-header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 2px solid #ddd;
+    border: 3px solid #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
 }
 
 .profile-name {
-    margin: 10px 0 0 0;
-    font-size: 24px;
-    color: #333;
+    margin: 15px 0 0 0;
+    font-size: 28px;
+    color: #DA7A04;
+    font-weight: bold;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .profile-bio {
     margin: 20px 0;
     color: #666;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .profile-interactions button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    background-color: #FCE8D2;
+    color: #DA7A04;
+    border: #DA7A04 3px solid;
     padding: 10px 20px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s;
+}
+.profile-interactions2 button {
+    background-color: #FCE8D2;
+    color: #DA7A04;
+    border: #DA7A04 3px solid;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s;
 }
 
-.profile-interactions button:hover {
-    background-color: #0056b3;
+.profile-interactions button:hover, .profile-interactions2 button:hover {
+    background-color: #DA7A04;
+    border: none;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 .edit-form {
     margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .edit-form label {
     display: block;
     margin-top: 10px;
+    color: #FCE8D2;
+    font-weight: bold;
 }
 
 .edit-form input,
@@ -71,5 +120,68 @@ body {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.edit-form button {
+    background-color: #FCE8D2;
+    color: #DA7A04;
+    border: #DA7A04 3px solid;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s;
+}
+
+.edit-form button:hover {
+    background-color: #DA7A04;
+    border: none;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name {
+        font-size: 24px;
+    }
+
+    .edit-form input,
+    .edit-form textarea {
+        width: calc(100% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+
+    .profile-interactions button {
+        padding: 8px 16px;
+    }
+
+    .edit-form label {
+        font-size: 14px;
+    }
+
+    .edit-form input,
+    .edit-form textarea {
+        padding: 8px;
+    }
 }
