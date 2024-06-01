@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
 }
 
 h1 {
-   text-align: center;
+    text-align: center;
 }
 
 .p1 {
@@ -21,12 +22,11 @@ h1 {
     color: #949494;
 }
 
-
-
 main {
     padding: 20px;
 }
 
+/* FAQ Section Styles */
 .faq-section {
     max-width: 800px;
     margin: 0 auto;
@@ -68,7 +68,7 @@ main {
     display: block;
     background-color: #fff;
     overflow: hidden;
-    transition: max-height 0.2s ease, opacity 0.2s ease, padding 0.2s ease;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
 }
 
 .faq-answer.open {
@@ -85,12 +85,15 @@ main {
 
 /* Media Queries for responsiveness */
 
+/* For devices with a max width of 1200px */
 @media (max-width: 1200px) {
     .faq-section {
         padding: 0 20px;
     }
 }
 
+
+/* For devices with a max width of 768px */
 @media (max-width: 768px) {
     .faq-question {
         font-size: 14px;
@@ -102,6 +105,7 @@ main {
     }
 }
 
+/* For devices with a max width of 480px */
 @media (max-width: 480px) {
     main {
         padding: 10px;

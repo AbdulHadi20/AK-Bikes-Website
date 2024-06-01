@@ -590,4 +590,22 @@ section .bikeservices {
   font-size: 12px;
   margin-top: 20px;
   color: #DA7A04;
+}
+
+@media (max-width: 899px) {
+  .footer-columns {
+    flex-direction: column; /* Change to column layout for smaller screens */
+  }
+  .footer-column:not(:last-child)::after {
+    display: none; /* Hide vertical dividing lines for smaller screens */
+  }
+  .footer-column {
+    max-width: 100%; /* Each column takes up full width */
+    padding: 10px 0; /* Adjust padding for smaller screens */
+    margin-bottom: 20px; /* Add margin between columns for better spacing */
+  }
+  address iframe {
+    width: 200px;
+    height: 150px;
+  }
 }/*# sourceMappingURL=homepage.css.map */
