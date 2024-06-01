@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/e5dccc8960.js" crossorigin="anonymous"></script> <!--script to connect online icon toolkit-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Pages/CSS Files/cart.css"> <!--link to external css file-->
+  <link rel="icon" type = "image/png" href="/Media/logo.png"> <!--displaying the  icon/logo image on the title bar-->
+  <title>AK Bikes</title> <!--title displayed on the titlebar-->
+</head>
+<body>
+
+  <!------ header ------>
+  <header> 
+
+    <div class="hamburger-menu" id="hamburger-menu"> <!--hamburger menu, shows in tab/mobile modes-->
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    <a href="/Pages/homepage.html"><img src="/Media/mainlogo.png" alt="logo" id="logo"></a>
+    
+
+    <ul class="nav-bar" id="nav-bar">
+        <li><a href="/Pages/shop.html">Shop</a></li>
+        <li><a href="Services page.html">Services</a></li>
+        <li><a href="/Pages/rentals.html">Rentals</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="About us page.html">About Us</a></li>
+    </ul>
+
+    <div class="icons">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
+        <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
+        <div class="search-box">
+            <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
+            <input type="text" class="input-search hidden" placeholder="Search.....">
+        </div>
+    </div>
+</header>
+  <!------ header ------>
+
+  <!------ cart ------->
+  <div class="title">
+    <h1>MY CART</h1>
+  </div>
+
+  
+  <div class="cart-page">
+    <div class="product-container">
+      <img class="product-pic" src="/Media/bike1.webp" alt="Specialized Allez E5 Road Bike">
+      <div class="product-details">
+        <h2>Specialized Allez E5 Road Bike</h2>
+        <p>AED 1899.00</p>
+      </div>
+      <div class="number-input">
+        <button class="decrement">-</button>
+        <input type="number" id="quantity" value="1">
+        <button class="increment">+</button>
+      </div>
+      <button class="remove-product">&times;</button>
+    </div>
+  </div>
+
+  <div class="cart-page">
+    <div class="product-container">
+      <img class="product-pic" src="/Media/bike2.webp" alt="Planet X Time Trial Bike">
+      <div class="product-details">
+        <h2>Planet X Time Trial Bike</h2>
+        <p>AED 10500.00</p>
+      </div>
+      <div class="number-input">
+        <button class="decrement">-</button>
+        <input type="number" id="quantity" value="1">
+        <button class="increment">+</button>
+      </div>
+      <button class="remove-product">&times;</button>
+    </div>
+  </div>
+
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    <ul class="summary-list">
+      <li>
+        <span>Specialized Allez E5 Road Bike</span>
+        <span>AED 1899.00</span>
+      </li>
+      <li>
+        <span>Planet X Time Trial Bike</span>
+        <span>AED 10500.OO</span>
+      </li>
+      <li>
+        <span>Shipping Fee</span>
+        <span>AED 50.00</span>
+      </li>
+      <div class="vat">
+        <span>Final ammount of shipping fee calculated at checkout</span>
+      </div>
+    </ul>
+    <div class="total">
+      <span>SUBTOTAL</span>
+      <span>AED 12399.00</span>
+    </div>
+    <div class="total">
+      <span>TOTAL</span>
+      <span>AED 12449.00</span>
+    </div>
+    <div class="vat">
+      <span>(including VAT)</span>
+    </div>
+  </div>
+
+  <div class="cart-buttons">
+    <button><a href="#checkout"><i class="fas fa-shopping-cart"></i> Proceed to Checkout</a></button>
+    <button><a href="#shop"><i class="fas fa-shopping-bag"></i> Continue Shopping</a></button>
+  </div>
+  <!------ cart ------->
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-logo-container">
+        <img src="/Media/mainlogo.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <ul class="navmenu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Shop">Shop</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Rentals">Rentals</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+                <li><a href="#Aboutus">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul class="navmenu">
+                <li><a href="#Size Guides">Size Guides</a></li>
+                <li><a href="#FAQs">FAQs</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Privacy Policy">Privacy Policy</a></li>
+                <li><a href="#Terms & Conditions">Terms & Conditions</a></li>
+                <li><a href="#Refund Policy">Refund Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <p class="text">
+                "Dubai's Premier<br>
+                Destination for Pre-Loved<br>
+                Bikes,Rentals and<br>
+                Services"                
+            </p>
+        </div>
+        <div class="footer-column">
+            <address>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.2717576769796!2d55.360628274838355!3d25.227770230462735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ec8087c44032023%3A0xd7045206acf291a7!2sAK%20Bikes!5e0!3m2!1sen!2sae!4v1716827948220!5m2!1sen!2sae" width="300" height="200" style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </address>
+            <div class="iconstyle">
+            <a href="https://www.facebook.com/akbikes.ae" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/akbikes.ae/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCnVDbCl0OMDXgHo67Zznshg" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@akbikes.ae" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B971585826605&text&type=phone_number&app_absent=0" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024, AK Bikes</p>
+    </div>
+  </footer>
+  <!-- footer -->
+
+  <script src="/Pages/Javascript Files/cart.js"></script>
+</body>
+</html>
+</html>

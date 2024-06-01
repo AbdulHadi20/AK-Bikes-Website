@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/e5dccc8960.js" crossorigin="anonymous"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Pages/CSS Files/product.css">
+    <link rel="icon" type = "image/png" href="/Media/mainlogo.png">
+    <title>AK Bikes</title>
+</head>
+<body>
+  <!-------------- header -------------->
+  <header> 
+
+    <div class="hamburger-menu" id="hamburger-menu"> <!--hamburger menu, shows in tab/mobile modes-->
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    <a href="/Pages/homepage.html"><img src="/Media/mainlogo.png" alt="logo" id="logo"></a>
+    
+
+    <ul class="nav-bar" id="nav-bar">
+        <li><a href="/Pages/shop.html">Shop</a></li>
+        <li><a href="Services page.html">Services</a></li>
+        <li><a href="/Pages/rentals.html">Rentals</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="About us page.html">About Us</a></li>
+    </ul>
+
+    <div class="icons">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
+        <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
+        <div class="search-box">
+            <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
+            <input type="text" class="input-search hidden" placeholder="Search.....">
+        </div>
+    </div>
+  </header>
+  <!--------------- header --------------->
+
+
+
+
+
+  <!--------- product details ----------->
+  <div class="product-details-page">
+    <div class="product-images">
+      <div class="thumbnail-container">
+        <img class="thumbnail" src="/Media/bike1.webp" alt="Thumbnail 1">
+        <img class="thumbnail" src="/Media/bike1.1.webp" alt="Thumbnail 2">
+        <img class="thumbnail" src="/Media/bike1.2.webp" alt="Thumbnail 3">
+        <img class="thumbnail" src="/Media/bike1.3.webp" alt="Thumbnail 4">
+        <img class="thumbnail" src="/Media/bike1.4.webp" alt="Thumbnail 5">
+      </div>
+      <div class="main-image-container">
+        <img id="main-image" src="/Media/bike1.webp" alt="Main Product Image">
+      </div>
+    </div>
+    <div class="product-info">
+      <h1>Specialized Allez E5 Road Bike</h1>
+      <p class="price">AED 1899.00</p>
+      <p class="vat">Price is inclusive of VAT</p>
+      <div class="specifications">
+        <p>Size: 54cm</p>
+        <p>Condition: 8/10</p>
+        <p>Weight: 10.07 kg</p>
+        <br>
+        <p><b><i>Specifications:</i></b></p>
+        <p>FRAME: Specialized E5 Premium Aluminum</p>
+        <p>FORK: Specacialized Fact Carbon</p>
+        <p>HANDLEBAR: Specialized AL-6061 420 mm</p>
+        <p>STEM: Specialized Aluminium 100 mm</p>
+        <p>SHIFTERS: Shimano Sora ST-R3500 9x2-Speed</p>
+        <p>FRONT DERAILLEUR: Shimano Sora FD-R3500 dual-speed</p>
+        <p>REAR DERAILLEUR: Shimano Sora RD-R3500 9-speed</p>
+        <p>BRAKES: Axis 1.0 rim caliper</p>
+        <p>CASSETTE: Shimano CS-HG-50-9</p>
+        <p>CHAIN: KMC X9 9-speed</p>
+        <p>CRANKSET: Shimano Sora 170 mm</p>
+        <p>WHEELSET: AXIS Classic rims</p>
+        <p>TYRES: Espoir Sport 700x25c</p>
+        <p>SADDLE: Specialized</p>
+        <p>SEATPOST: Specialized</p>
+      </div>
+      <div class="quantity-info">
+        <h2>Quantity</h2>
+        <div class="quantity-selector">
+          <button class="decrement">-</button>
+          <input type="number" id="quantity" value="1" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+        <button class="buy-now">Buy Now <i class="fas fa-credit-card"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <section class="similar-products">
+    <h2>Similar Products</h2>
+    <div class="products-container">
+      <div class="product-card">
+        <img src="/Media/similar_1.webp" alt="Product 1">
+        <h3>Giant Liv Avail 3 Women's Road Bike</h3>
+        <p class="price">AED 1299.00</p>
+        <button class="view-button" href="/Pages/product.html">View</button>
+      </div>
+      <div class="product-card">
+        <img src="/Media/similar_2.webp" alt="Product 2">
+        <h3>Cannondale Slice Time Trial Bike</h3>
+        <p class="price">AED 3000.00</p>
+        <button class="view-button" href="/Pages/product.html">View</button>
+      </div>
+      <div class="product-card">
+        <img src="/Media/similar_3.webp" alt="Product 3">
+        <h3>Triban RC500 Gravel Bike</h3>
+        <p class="price">AED 1399.00</p>
+        <button class="view-button" href="/Pages/product.html">View</button>
+      </div>
+      <div class="product-card">
+        <img src="/Media/similar_4.webp" alt="Product 4">
+        <h3>Scott Speedster 20 Road Bike</h3>
+        <p class="price">AED 2800.00</p>
+        <button class="view-button" href="/Pages/product.html">View</button>
+      </div>
+      <div class="product-card">
+        <img src="/Media/similar_5.webp" alt="Product 5">
+        <h3>Giant Escape 3 Hybrid Bike</h3>
+        <p class="price">AED 1100.00</p>
+        <button class="view-button" href="/Pages/product.html">View</button>
+      </div>
+      <div class="product-card">
+        <img src="/Media/similar_6.webp" alt="Product 6">
+        <h3>Specialized Allez Road Bike</h3>
+        <p class="price">AED 2700.00</p>
+        <button class="view-button" href="/Pages/product.html">View</button>
+      </div>
+    </div>
+  </section>
+  <!--------- product details ----------->
+
+
+
+
+
+  <!--------- footer ----------->
+  <footer class="footer">
+    <div class="footer-logo-container">
+        <img src="/Media/mainlogo.png" alt="Logo" class="footer-logo">
+    </div>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <ul class="navmenu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Shop">Shop</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Rentals">Rentals</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+                <li><a href="#Aboutus">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul class="navmenu">
+                <li><a href="#Size Guides">Size Guides</a></li>
+                <li><a href="#FAQs">FAQs</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Privacy Policy">Privacy Policy</a></li>
+                <li><a href="#Terms & Conditions">Terms & Conditions</a></li>
+                <li><a href="#Refund Policy">Refund Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <p class="text">
+                "Dubai's Premier<br>
+                Destination for Pre-Loved<br>
+                Bikes,Rentals and<br>
+                Services"                
+            </p>
+        </div>
+        <div class="footer-column">
+            <address>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.2717576769796!2d55.360628274838355!3d25.227770230462735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ec8087c44032023%3A0xd7045206acf291a7!2sAK%20Bikes!5e0!3m2!1sen!2sae!4v1716827948220!5m2!1sen!2sae" width="300" height="200" style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </address>
+            <div class="iconstyle">
+            <a href="https://www.facebook.com/akbikes.ae" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/akbikes.ae/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCnVDbCl0OMDXgHo67Zznshg" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@akbikes.ae" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B971585826605&text&type=phone_number&app_absent=0" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024, AK Bikes</p>
+    </div>
+  </footer>
+  <!--------- footer ----------->
+
+  <!--------- popup message ----------->
+  <div class="dim-background"></div>
+  <div class="popup-container">
+    <p>Great choice! Items added to cart!</p>
+    <button class="proceed-to-checkout">Proceed to Cart</button>
+    <button class="continue-shopping">Continue Shopping</button>
+  </div>
+  <!--------- popup message ----------->
+    <script src="/Pages/Javascript Files/product.js"></script>
+</body>
+</html>
