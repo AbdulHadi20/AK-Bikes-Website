@@ -143,7 +143,7 @@ header .search-box a {
     margin: 10px 0;
   }
   header .nav-bar li a {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   header .icons i {
     text-align: center;
@@ -185,6 +185,11 @@ main .slides::before {
     height: 44%;
   }
 }
+@media (max-width: 480px) {
+  main .slides::before {
+    height: 100%;
+  }
+}
 main .slide1, main .slide2, main .slide3, main .slide4, main .slide5 {
   display: flex;
   flex-direction: column;
@@ -202,12 +207,30 @@ main .slide1 {
   width: 100%;
   height: 100vh;
 }
+@media (max-width: 480px) {
+  main .slide1 {
+    background-image: url(/Media/salesmobilebanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+}
 main .slide2 {
   background-image: url(/Media/slide1banner.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+}
+@media (max-width: 480px) {
+  main .slide2 {
+    background-image: url(/Media/mobileservicesbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
 }
 main .slide3 {
   background-image: url(/Media/bikepartsdesktopbanner.png);
@@ -216,6 +239,15 @@ main .slide3 {
   width: 100%;
   height: 100vh;
 }
+@media (max-width: 480px) {
+  main .slide3 {
+    background-image: url(/Media/mobilepartsbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+}
 main .slide4 {
   background-image: url(/Media/bikeaccessoriesdesktopbanner.png);
   background-size: contain;
@@ -223,12 +255,30 @@ main .slide4 {
   width: 100%;
   height: 100vh;
 }
+@media (max-width: 480px) {
+  main .slide4 {
+    background-image: url(/Media/mobileaccessoriesbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+}
 main .slide5 {
   background-image: url(/Media/bikerentalsdesktopbanner.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+}
+@media (max-width: 480px) {
+  main .slide5 {
+    background-image: url(/Media/mobilerentalsbanner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
 }
 main h4, main h1, main button {
   color: #fff;
@@ -238,6 +288,11 @@ main h4, main h1, main button {
   z-index: 2;
 }
 @media (max-width: 899px) {
+  main h4, main h1, main button {
+    margin: 0px 50px;
+  }
+}
+@media (max-width: 480px) {
   main h4, main h1, main button {
     margin: 0px 50px;
   }
@@ -252,12 +307,23 @@ main h4 {
     font-size: 16px;
   }
 }
+@media (max-width: 480px) {
+  main h4 {
+    margin-top: 150px;
+    font-size: 14px;
+  }
+}
 main h1 {
   font-size: 70px;
 }
 @media (max-width: 899px) {
   main h1 {
     font-size: 45px;
+  }
+}
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 30px;
   }
 }
 main button {
