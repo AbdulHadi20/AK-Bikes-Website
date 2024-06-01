@@ -17,6 +17,145 @@ body {
     background-color: $color5;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    background-color: $color4;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  } 
+  header img {
+    width: 100px;
+    height: 110px;
+  }
+
+  #tab-searchbar {
+    display: none;
+  }
+  header .hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: $color1;
+  }
+  header .nav-bar {
+    display: flex;
+  }
+  header .nav-bar li {
+    list-style: none;
+  }
+  header .nav-bar li a {
+    padding: 5px 10px;
+    margin: 2px 25px;
+    text-decoration: none;
+    color: $color1;
+    font-weight: bold;
+    font-size: 1.02rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease;
+  }
+  header .nav-bar li a:hover {
+    border-bottom: 1px solid $color1;
+  }
+  header .icons {
+    display: flex;
+  }
+  header .icons i {
+    color: $color1;
+    padding: 5px 10px;
+    font-size: 1.02rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease;
+  }
+  header .icons i:hover {
+    border-bottom: 1px solid $color1;
+  }
+  header .search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  header .search-box .input-search {
+    width: 0;
+    padding: 5px 10px;
+    font-size: 1.002rem;
+    border-style: none;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    transition: width 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .search-box .input-search::-moz-placeholder {
+    color: #9f9f9f;
+  }
+  header .search-box .input-search::placeholder {
+    color: #9f9f9f;
+  }
+  header .search-box .input-search.hidden {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .search-box .input-search.expanded {
+    width: 200px;
+    opacity: 1;
+    visibility: visible;
+  }
+  header .search-box a {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 899px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    header img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header .hamburger-menu {
+      display: block;
+      margin: 10px;
+      padding: 10px;
+    }
+    header .nav-bar {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    header .nav-bar.active {
+      display: flex;
+    }
+    header .nav-bar li {
+      margin: 10px 0;
+    }
+    header .nav-bar li a {
+      font-size: 1.2rem;
+    }
+
+    header .icons i {
+      text-align: center;
+      margin: 0 15px;
+    }
+    header #tab-searchbar {
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+      
+      i {
+        color: $color1;
+        font-size: 18px;
+      }
+    }
+  }
 
 // setting up the hero section
 main {
@@ -39,6 +178,10 @@ main {
         height: 78%;
         background: rgba(0, 0, 0, 0.5); 
         z-index: 1;
+
+        @media (max-width: 899px) {
+          height: 44%;
+        }
     }
 
     .slide1, .slide2, .slide3, .slide4, .slide5 {
@@ -101,15 +244,28 @@ h4, h1, button {
     padding: 20px 0px;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 899px) {
+      margin: 0px 50px;
+    }
 }
 
 h4 {
     margin-top: 200px;
     font-size: 18px;
+
+    @media (max-width: 899px) {
+      margin-top: 100px;
+      font-size: 16px;
+    }
 }
 
 h1 {
     font-size: 70px;
+
+    @media (max-width: 899px) {
+      font-size: 45px;
+    }
 }
 
 button {
@@ -119,6 +275,12 @@ button {
     font-size: 18px;
     font-weight: bold;
     border: none;
+
+    @media (max-width: 899px) {
+      border-radius: 15px;
+      padding: 10px;
+      font-size: 16px;
+    }
 }
 
 button:hover {
@@ -139,10 +301,11 @@ section {
         margin: 30px 40px;
         padding: 10px 15px;
 
-        @media (max-width: 800px) {
+        @media (max-width: 899px) {
             display: flex;
             flex-direction: column;
             gap: 40px;
+            margin: 15px 20px;
         }
     }
 
@@ -211,7 +374,7 @@ section {
     font-size: 70px;
     font-weight: bold;
     
-    @media (max-width: 800px) {
+    @media (max-width: 899px) {
         font-size: 50px;
     }
 
@@ -225,9 +388,11 @@ section {
     justify-content: space-around;
     margin-top: 120px;
 
-     @media (max-width: 800px) {
+     @media (max-width: 899px) {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 40px;
      }
     .cards {
@@ -292,9 +457,12 @@ section {
         margin: 20px;
         padding: 20px;
             
-        @media (max-width: 800px) {
+        @media (max-width: 899px) {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            word-wrap: break-word;
         }
 
         
