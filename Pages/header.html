@@ -3,44 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e5dccc8960.js" crossorigin="anonymous"></script> <!--script to connect online icon toolkit-->
+    <title>RESPONSIVE WEBSITE</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS Files/headers.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type = "image/png" href="/Media/mainlogo.png"> <!--displaying the  icon/logo image on the title bar-->
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
-    <title>AK Bikes</title>
-    <link rel="stylesheet" href= "/Pages/CSS Files/homepage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700;1,800;1,900&display=swap">
 </head>
 <body>
-    <header> 
 
-        <div class="hamburger-menu" id="hamburger-menu"> <!--hamburger menu, shows in tab/mobuile modes-->
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-        <a href="/Pages/homepage.html"><img src="/Media/mainlogo.png" alt="logo" id="logo"></a>
-        
+    <header>
+        <img src="/Web Design acts/AK-Bikes-Website/Media/mainlogo.png" alt="" class="logo-img">
     
-        <ul class="nav-bar" id="nav-bar">
-            <li><a href="/Pages/shop.html">Shop</a></li>
-            <li><a href="Services page.html">Services</a></li>
-            <li><a href="/Pages/rentals.html">Rentals</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="About us page.html">About Us</a></li>
+        <ul class="navbar">
+            <li><a href="#home">Shop</a></li>
+            <li><a href="#home">Services</a></li>
+            <li><a href="#home">Rentals</a></li>
+            <li><a href="#menu">Blogs</a></li>
+            <li><a href="#about">About us</a></li>
         </ul>
     
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
-            <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
-            <div class="search-box">
-                <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
-                <input type="text" class="input-search hidden" placeholder="Search.....">
-            </div>
+        <div class="h-icons">
+            <a href="#" id="search-toggle"><i class='bx bx-search'></i></a>
+            <a href="#"><i class='bx bx-cart' ></i></a>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-    </header>
-
     
-</body>
+            <!-- Search Bar -->
+            <div class="search-container" id="search-container">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button id="search-button">Search</button>
+            </div>
+    </header>
+    
+    <script type="text/javascript" src="Javascript Files/header.js"></script>
 
-<script src="/Pages/Javascript Files/homepage.js"></script>
+</body>
 </html>
