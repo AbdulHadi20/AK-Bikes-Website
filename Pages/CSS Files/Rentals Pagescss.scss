@@ -1,0 +1,492 @@
+$main-color: #a47700;
+$black: #000000;
+$white: #ffffff;
+$grey: #a5a5a5;
+$font: 'Mulish', sans-serif;
+$shadow-settings: 14px 0px 9.300000190734863px 10px rgba(0, 0, 0, 0.25);
+
+
+    body {
+      font-family: $font;
+      margin: 0;
+      padding: 0;
+     
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('AkBikesPic.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensuring the pseudo-element is in behind of the other content */
+        filter: blur(5px); /* Applying the blur effects */
+        transform: scale(1.1); /* Scaling up slightly to the cover of edges when getting blurred */
+      }
+      
+  }
+
+  header {
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    background-color: #000000;
+    box-shadow: $shadow-settings;
+    z-index: 1000;
+}
+  
+  header img {
+    width: 120px;
+    height: 120px;
+    
+    /*media queries*/
+    @media (max-width: 799px) { 
+        width: 80px;
+        height: 80px;
+    }
+
+    @media (max-width: 599px) {
+        width: 60px;
+        height: 60px;
+    }
+
+    @media (max-width: 400px) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+header ul {
+    list-style-type: none;
+}
+
+.headd li {
+    width: auto;
+    top: 0;
+    padding: 0px 30px;
+    margin: 30px 0px;
+    display: inline-block;
+
+   
+
+}
+
+.headd li a {
+    text-decoration: none;
+    color: $white;
+}
+
+.headd li:hover {
+    background-color: $main-color;
+    border-radius: 15px;
+}
+
+.icons i{
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 50px 0px;
+    color: #ffffff;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #d87a04;
+      padding: 2%;
+      text-align: center;
+      font-size: 350%;
+      font-family: $font;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      
+    }
+
+    .container {
+      display: flex;
+      
+    }
+
+    .filters {
+      width: 25%;
+      padding: 16px;
+      font-family: $font;
+
+
+
+      h3 {
+        font-size: 200%;
+        color: rgb(255, 255, 255);
+      }
+
+      .filter-group {
+        margin-bottom: 10%;
+
+        h3 {
+          margin-bottom: 2%;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 4%;
+          color: rgb(255, 255, 255);
+        }
+
+        input[type="checkbox"][name="color"] {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .gallery {
+      width: 2300px;
+      padding: 20px;
+      
+
+     
+      
+      
+
+      
+
+      .view-toggle {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        
+
+        button {
+          padding: 10px 20px;
+          margin: 0 5px;
+          cursor: pointer;
+          border: 1px solid #ddd;
+          background-color: #f9f9f9;
+
+          &.active {
+            background-color: #d87a04;
+            color: #fff;
+          }
+        }
+      }
+
+      .product-view {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        border: 4px solid $main-color;
+        
+
+
+        &.list-view {
+          flex-direction: row;
+          padding: 30px;
+          
+          
+    
+          .product {
+            display: grid;
+            grid-template-columns: 250px 1fr 150px;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left; /* Aligning the text to the left of the website */
+            height: 185px;
+            transition: transform 0.30s ease-in-out; /* Adding the transition for a smooth animations */
+            cursor: pointer;
+            
+            &:hover {
+              transform: scale(1.02); /* Scaling up the products to container on hover */
+            }
+            
+            img {
+              width: 250px !important; /* Fixing width for the list view */
+              height: auto !important;
+            
+      
+            
+
+            }
+    
+            .product-name {
+              font-size: 23px;
+              font-family: $font;
+              margin: 0;
+              text-align: center ;
+              width: calc(99.333% - 60px);
+              height: 35px;
+              color: black;
+            }
+    
+            .product-price {
+              color: #e74c3c;
+              font-size: 20px;
+              font-family: $font;
+              text-align: center;
+            
+            }
+          }
+        }
+
+        &.gallery-view {
+          flex-direction: row;
+          padding: 30px;
+
+          .product {
+            width: calc(33.333% - 40px);
+            transition: transform 0.30s ease-in-out; /* Adding transitions for a smooth animations */
+        
+            &:hover {
+              transform: scale(1.05); /* Scaling up the products of thw container on hovering */
+            }
+
+            img {
+              max-width: 100%;
+              height: auto;
+              
+            }
+          }
+        }
+
+        .product {
+          background-color: #fff;
+          border: 2px solid #ddd;
+          padding: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.30s ease-in-out; /* Adding transitions for the smooth animations */
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05); /* Scaling up the products container on hovering */
+          }
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+
+          .product-name {
+            font-size: 23px;
+            font-family: $font;
+            margin: 8px;
+            color: black;
+          }
+
+          .product-price {
+            color: #e74c3c;
+            font-size: 20px;
+            font-family: $font;
+          }
+        }
+      }
+    }
+
+    .selection-icon {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      
+    }
+
+    .icon {
+      flex-basis: 30%;
+      margin: 20px;
+    }
+
+    .icon img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .icon span {
+      display: block;
+      font-size: 16px;
+      font-family: $font;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Mulish', sans-serif;
+        line-height: 2;
+    }
+    
+    .footer {
+        background-color: #222222;
+        padding: 20px 0;
+        text-align: center;
+    }
+  
+    
+    .footer-logo-container {
+        margin-bottom: 20px;
+    }
+    
+    .footer-logo {
+        max-width: 150px; /* Adjust size as needed */
+        height: auto;
+        display: block; /* Ensures the image is a block element */
+        margin: 0 auto; /* Centers the logo horizontally */
+        
+    }
+
+      
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    }
+    
+    .footer-column {
+        flex: 1;
+        max-width: 25%; /* Each column takes up 25% of the width */
+        padding: 0 10px;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        position: relative; /* Required for pseudo-element */
+    }
+    
+    .footer-column:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0; /* Added to stretch the line to the bottom */
+        width: 1px;
+        background-color: #DA7A04;
+    }
+    
+    .navmenu, address {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .navmenu li {
+        margin-bottom: 5px;
+    }
+    
+    .navmenu li a {
+        text-decoration: none;
+        color: #DA7A04;
+    }
+    
+    .navmenu li a:hover {
+        text-decoration: underline;
+    }
+    
+    .text {
+        font-size: 20px;
+        font-style: italic;
+    }
+    
+    /* Container for icons */
+    .iconstyle {
+        display: flex; /* Use flexbox for horizontal alignment */
+        justify-content: center; /* Align icons horizontally */
+        align-items: center; /* Center icons vertically */
+      }
+      
+      /* Style individual icon links */
+      .iconstyle a {
+        text-decoration: none; /* Remove underline */
+        margin: 0 10px; /* Add spacing between icons */
+      }
+      
+      /* Style icon elements */
+      .iconstyle i {
+        font-size: 24px; /* Adjust icon size */
+        color: #fff; /* Default icon color */
+        transition: transform color 1s ease; /* Add transition effect for zooming */
+      }
+      
+      /* Hover effect for icon links */
+      .iconstyle a:hover i {
+        transform: scale(1.4); /* Zoom in on hover */
+        color: #DA7A04;
+      }
+    
+    .copyright {
+        position: relative;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .footer-column p{
+      color: #DA7A04;
+    }
+    
+    
+  /* Media queries for filters */
+@media (max-width: 1024px) {
+  .filters {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Media queries for gallery-view and list-view */
+@media (max-width: 1024px) {
+  .gallery .product-view {
+    &.list-view {
+      .product {
+        grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
+        height: auto; /* Remove fixed height */
+      }
+    }
+    &.gallery-view {
+      .product {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+      }
+    }
+  }
+}
+
+/* Media queries for product-view */
+@media (max-width: 768px) {
+  .gallery .product-view {
+    &.list-view {
+      .product {
+       
+        padding: 20px; /* Adjust padding for smaller screens */
+      }
+    }
+    &.gallery-view {
+      .product {
+        width: calc(100% - 20px); /* Adjust width for smaller screens */
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .view-toggle button.list-view {
+    display: none; /* Hide the list view button */
+  }
+}
+
+    
