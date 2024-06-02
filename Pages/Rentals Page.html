@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/791f5c467e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="footer.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rental</title>
-  <link rel="stylesheet" href="Rentals Pagescss.css">
-  <link rel="icon" type = "image/png" href="logo-image-nobg.png">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AK Bikes</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS Files/Rentals Pagescss.css">
+    <link rel="icon" type = "image/png" href="/Media/mainlogo.png"> <!--displaying the  icon/logo image on the title bar-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700;1,800;1,900&display=swap">
 </head>
 <body>
-  <header>
-    <a href="index.html"><img src="logo-image-nobg.png" alt=""></a> <!--logo image-->
 
-    <ul class="headd"> <!--unordered list for dropdown menu-->
-        <li><a href="#bikesales-section">Shop</a></li> <!--navigation links-->
-        <li><a href="#bikeservice-section">Services</a></li> <!--other navigation links-->
-        <li><a href="#bikerentals-section">Rentals</a></li>
-        <li><a href="AK Bikes/Pages/aboutus.html">About Us</a></li>
-    </ul>
-
-    <div class="icons"> <!--div stored icons-->
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
-        <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
-    </div>
-  </header>
+    <header>
+        <a href="homepage.html"><img src="/Media/mainlogo.png" alt="" class="logo-img"></a>
+    
+        <ul class="navbar">
+            <li><a href="Rentals Page.html">Shop</a></li>
+            <li><a href="Services page.html">Services</a></li>
+            <li><a href="Rentals Page.html">Rentals</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="About us page.html">About us</a></li>
+        </ul>
+    
+        <div class="h-icons">
+            <a href="#" id="search-toggle"><i class='bx bx-search'></i></a>
+            <a href="cart.html"><i class='bx bx-cart' ></i></a>
+            <a href="profile.html"><i class='bx bx-user'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    
+            <!-- Search Bar -->
+            <div class="search-container" id="search-container">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button id="search-button">Search</button>
+            </div>
+    </header>
   <h1 class="header-title">Product</h1>
   <div class="container">
     <aside class="filters">
@@ -74,62 +78,62 @@
       </div>
       <div class="product-view">
         <div class="product" data-type="mountain" data-size="large" data-color="blue" data-price="7999">
-          <img src="bike1.jpg" alt="Mountain Bike">
+          <img src="/Media/bike1.jpg" alt="Mountain Bike">
           <p class="product-name">BH Lynx Evo Mountain Bike</p>
           <p class="product-price">7,999.00 AED</p>
         </div>
         <div class="product" data-type="road" data-size="medium" data-color="white" data-price="2499">
-          <img src="bike2.jpg" alt="Road Bike">
+          <img src="/Media/bike2.jpg" alt="Road Bike">
           <p class="product-name">BH Prisma Carbon Road Bike</p>
           <p class="product-price">2,499.00 AED</p>
         </div>
         <div class="product" data-type="tt" data-size="large" data-color="black" data-price="10500">
-          <img src="bike3.jpg" alt="TT Bike">
+          <img src="/Media/bike3.jpg" alt="TT Bike">
           <p class="product-name">Planet X Time Trial Bike</p>
           <p class="product-price">10,500.00 AED</p>
         </div>
         <div class="product" data-type="kids" data-size="small" data-color="pink" data-price="600">
-          <img src="bike4.jpg" alt="Kids Bike">
+          <img src="/Media/bike4.jpg" alt="Kids Bike">
           <p class="product-name">B'twin Original 500 Kids Bike</p>
           <p class="product-price">600.00 AED</p>
         </div>
         <div class="product" data-type="road" data-size="medium" data-color="green" data-price="2300">
-          <img src="bike5.jpg" alt="Road Bike">
+          <img src="/Media/bike5.jpg" alt="Road Bike">
           <p class="product-name">Scott Speedster 30 Road Bike</p>
           <p class="product-price">2,300.00 AED</p>
         </div>
         <div class="product" data-type="gravel" data-size="medium" data-color="green" data-price="2699">
-          <img src="bike6.jpg" alt="Gravel Bike">
+          <img src="/Media/bike6.jpg" alt="Gravel Bike">
           <p class="product-name">Scott Speedster 20 Gravel Bike</p>
           <p class="product-price">2,699.00 AED</p>
         </div>
         <div class="product" data-type="mountain" data-size="medium" data-color="white" data-price="3999">
-          <img src="bike7.jpg" alt="Mountain Bike">
+          <img src="/Media/bike7.jpg" alt="Mountain Bike">
           <p class="product-name">Specialized Camber Expert Mountain Bike</p>
           <p class="product-price">3,999.00 AED</p>
         </div>
         <div class="product" data-type="road" data-size="medium" data-color="black" data-price="1299">
-          <img src="bike8.jpg" alt="Road Bike">
+          <img src="/Media/bike8.jpg" alt="Road Bike">
           <p class="product-name">Giant Liv Avail 3 Women's Road Bike</p>
           <p class="product-price">1,299.00 AED</p>
         </div>
         <div class="product" data-type="gravel" data-size="large" data-color="black" data-price="2499">
-          <img src="bike9.jpg" alt="Gravel Bike">
+          <img src="/Media/bike9.jpg" alt="Gravel Bike">
           <p class="product-name">Scott Speedster 40 Gravel Bike</p>
           <p class="product-price">2,499.00 AED</p>
         </div>
         <div class="product" data-type="kids" data-size="small" data-color="pink" data-price="550">
-          <img src="bike10.jpg" alt="Kids bike">
+          <img src="/Media/bike10.jpg" alt="Kids bike">
           <p class="product-name">Specialized Hotrock JR Kids Bike</p>
           <p class="product-price">550.00 AED</p>
         </div>
         <div class="product" data-type="hybrid" data-size="medium" data-color="blue" data-price="599">
-          <img src="bike11.jpg" alt="Hybrid Bike">
+          <img src="/Media/bike11.jpg" alt="Hybrid Bike">
           <p class="product-name">Liv Alight 2 Hybrid Bike</p>
           <p class="product-price">599.00 AED</p>
         </div>
         <div class="product" data-type="tt" data-size="large" data-color="black" data-price="10000">
-          <img src="bike12.jpg" alt="TT Bike">
+          <img src="/Media/bike12.jpg" alt="TT Bike">
           <p class="product-name">Trek Speed Concept Time Trial Bike</p>
           <p class="product-price">10,000.00 AED
           </p>
@@ -138,47 +142,46 @@
     </main>
   </div>
   
-  <script src="RentalsPage.js"></script>
+  <script src="/Pages/Javascript Files/RentalsPage.js"></script>
 
   <div class="selection-icon">
     <div class="icons">
       <div class="icon">
-        <img src="swift-delivery.png" alt="Swift Delivery">
+        <img src="/Media/swiftdelivery.jpg" alt="Swift Delivery">
         <span>Swift Delivery</span>
       </div>
       <div class="icon">
-        <img src="secure-payment.png" alt="Secure Payment">
+        <img src="/Media/securepayment.jpg" alt="Secure Payment">
         <span>Secure Payment</span>
       </div>
       <div class="icon">
-        <img src="customer-service.png" alt="Customer Service">
+        <img src="/Media/customersupport.jpg" alt="Customer Service">
         <span>Customer Service</span>
       </div>
     </div>
   </div>
+
+
   <footer class="footer">
     <div class="footer-logo-container">
-        <img src="logo.png" alt="Logo" class="footer-logo">
+        <img src="/Media/mainlogo.png" alt="Logo" class="footer-logo">
     </div>
     <div class="footer-columns">
         <div class="footer-column">
             <ul class="navmenu">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Shop">Shop</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Rentals">Rentals</a></li>
-                <li><a href="#Contacts">Contacts</a></li>
-                <li><a href="#Aboutus">About Us</a></li>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="Rentals Page.html">Shop</a></li>
+                <li><a href="Services page.html">Services</a></li>
+                <li><a href="Rentals Page.html">Rentals</a></li>
+                <li><a href="About us page.html">About Us</a></li>
             </ul>
         </div>
         <div class="footer-column">
             <ul class="navmenu">
                 <li><a href="#Size Guides">Size Guides</a></li>
-                <li><a href="#FAQs">FAQs</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Privacy Policy">Privacy Policy</a></li>
-                <li><a href="#Terms & Conditions">Terms & Conditions</a></li>
-                <li><a href="#Refund Policy">Refund Policy</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="Refund & Privacy Policy.html">Privacy & RefundPolicy </a></li>
+                <li><a href="Refund & Privacy Policy.html">Terms & Conditions</a></li>
             </ul>
         </div>
         <div class="footer-column">

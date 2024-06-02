@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refund & Privacy Policy</title>
-    <script src="https://kit.fontawesome.com/e5dccc8960.js" crossorigin="anonymous"></script> <!--script to connect online icon toolkit-->
+    <title>Home - AK Bikes</title>
+
+    <link rel="stylesheet" type="text/css" href="/Pages/CSS Files/policy.css">
+    <link rel="icon" type = "image/png" href="/Media/mainlogo.png"> <!--displaying the  icon/logo image on the title bar-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type = "image/png" href="/Media/mainlogo.png"> <!--displaying the  icon/logo image on the title bar-->
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS Files/policy.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700;1,800;1,900&display=swap">
 </head>
 <body>
-    <header> 
 
-        <div class="hamburger-menu" id="hamburger-menu"> <!--hamburger menu, shows in tab/mobuile modes-->
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-        <a href="/Pages/homepage.html"><img src="/Media/mainlogo.png" alt="logo" id="logo"></a>
-        
+    <header>
+        <a href="homepage.html"><img src="/Media/mainlogo.png" alt="" class="logo-img"></a>
     
-        <ul class="nav-bar" id="nav-bar">
-            <li><a href="/Pages/shop.html">Shop</a></li>
+        <ul class="navbar">
+            <li><a href="Rentals Page.html">Shop</a></li>
             <li><a href="Services page.html">Services</a></li>
-            <li><a href="/Pages/rentals.html">Rentals</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="About us page.html">About Us</a></li>
+            <li><a href="Rentals Page.html">Rentals</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="About us page.html">About us</a></li>
         </ul>
     
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> <!--shop cart icon-->
-            <a href="#"><i class="fa-solid fa-user"></i></a> <!--user icon-->
-            <div class="search-box">
-                <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a> <!--search icon-->
-                <input type="text" class="input-search hidden" placeholder="Search.....">
-            </div>
+        <div class="h-icons">
+            <a href="#" id="search-toggle"><i class='bx bx-search'></i></a>
+            <a href="cart.html"><i class='bx bx-cart' ></i></a>
+            <a href="profile.html"><i class='bx bx-user'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
+    
+            <!-- Search Bar -->
+            <div class="search-container" id="search-container">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button id="search-button">Search</button>
+            </div>
     </header>
+
+
     <div class="policy-container">
         <h1>Refund & Privacy Policy</h1>
 
@@ -111,6 +113,67 @@
             </div>
         </section>
     </div>
+
+    <footer class="footer">
+        <div class="footer-logo-container">
+            <img src="/Media/mainlogo.png" alt="Logo" class="footer-logo">
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <ul class="navmenu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="Rentals Page.html">Shop</a></li>
+                    <li><a href="Services page.html">Services</a></li>
+                    <li><a href="Rentals Page.html">Rentals</a></li>
+                    <li><a href="About us page.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul class="navmenu">
+                    <li><a href="#Size Guides">Size Guides</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="Refund & Privacy Policy.html">Privacy & RefundPolicy </a></li>
+                    <li><a href="Refund & Privacy Policy.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p class="text">
+                    "Dubai's Premier<br>
+                    Destination for Pre-Loved<br>
+                    Bikes,Rentals and<br>
+                    Services"                
+                </p>
+            </div>
+            <div class="footer-column">
+                <address>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.2717576769796!2d55.360628274838355!3d25.227770230462735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ec8087c44032023%3A0xd7045206acf291a7!2sAK%20Bikes!5e0!3m2!1sen!2sae!4v1716827948220!5m2!1sen!2sae" width="300" height="200" style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </address>
+                <div class="iconstyle">
+                <a href="https://www.facebook.com/akbikes.ae" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/akbikes.ae/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCnVDbCl0OMDXgHo67Zznshg" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@akbikes.ae" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B971585826605&text&type=phone_number&app_absent=0" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024, AK Bikes</p>
+        </div>
+    </footer>
 
     <script src="Javascript Files/header.js"></script>
 </body>
