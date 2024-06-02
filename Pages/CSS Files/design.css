@@ -3,7 +3,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: url(bg2.jpg) no-repeat center center fixed;
+  background: url(/Media/bg2.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -224,7 +224,7 @@ header .search-box a {
 
 .services .banner {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/banner.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/banner.JPG");
   background-size: cover;
   background-position: center;
   border-radius: 15px;
@@ -377,7 +377,7 @@ header .search-box a {
 
 .service-process .banner2 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/banner2.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/banner2.JPG");
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -391,7 +391,7 @@ header .search-box a {
 
 .service-process .banner3 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/banner3.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/banner3.JPG");
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -405,7 +405,7 @@ header .search-box a {
 
 .service-process .banner4 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/banner4.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/banner4.JPG");
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -419,7 +419,7 @@ header .search-box a {
 
 .service-process .banner5 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/banner5.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/banner5.JPG");
   background-size: cover;
   background-position: center;
   border-radius: 8px;

@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: url(bg2.jpg) no-repeat center center fixed;
+  background: url(/Media/bg2.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -270,7 +270,7 @@ header {
 
 .services .banner {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/banner.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 15px;
@@ -421,7 +421,7 @@ header {
 
 .service-process .banner2 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner2.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/banner2.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -435,7 +435,7 @@ header {
 
 .service-process .banner3 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner3.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/banner3.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -449,7 +449,7 @@ header {
 
 .service-process .banner4 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner4.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/banner4.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -463,7 +463,7 @@ header {
 
 .service-process .banner5 {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/banner5.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/banner5.JPG');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -507,7 +507,6 @@ html {
 }
 
 .footer {
-  margin-top: -200px;
   background-color: #222222;
   padding: 20px 0;
   text-align: center;
@@ -518,24 +517,24 @@ html {
 }
 
 .footer-logo {
-  max-width: 150px;
+  max-width: 150px; /* Adjust size as needed */
   height: auto;
-  display: block;
-  margin: 0 auto;
+  display: block; /* Ensures the image is a block element */
+  margin: 0 auto; /* Centers the logo horizontally */
 }
 
 .footer-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
 }
 
 .footer-column {
   flex: 1;
-  max-width: 25%;
+  max-width: 25%; /* Each column takes up 25% of the width */
   padding: 0 10px;
-  box-sizing: border-box;
-  position: relative;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  position: relative; /* Required for pseudo-element */
 }
 
 .footer-column:not(:last-child)::after {
@@ -543,13 +542,12 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; /* Added to stretch the line to the bottom */
   width: 1px;
-  background-color: #da7a04;
+  background-color: $color1;
 }
 
-.navmenu,
-address {
+.navmenu, address {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -571,70 +569,58 @@ address {
 .text {
   font-size: 20px;
   font-style: italic;
-}
-
-.iconstyle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.iconstyle a {
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.iconstyle i {
-  font-size: 24px;
-  color: #fff;
-  transition: transform color 1s ease;
-}
-
-.iconstyle a:hover i {
-  transform: scale(1.4);
   color: #da7a04;
+}
+
+/* Container for icons */
+.iconstyle {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: center; /* Align icons horizontally */
+  align-items: center; /* Center icons vertically */
+}
+
+/* Style individual icon links */
+.iconstyle a {
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Style icon elements */
+.iconstyle i {
+  font-size: 24px; /* Adjust icon size */
+  color: $color1; /* Default icon color */
+  transition: transform color 1s ease; /* Add transition effect for zooming */
+}
+
+/* Hover effect for icon links */
+.iconstyle a:hover i {
+  transform: scale(1.4); /* Zoom in on hover */
+  color: $color5;
 }
 
 .copyright {
   position: relative;
   font-size: 12px;
   margin-top: 20px;
+  color: $color1;
+}
+@media (max-width: 899px) {
+.footer-columns {
+    flex-direction: column; /* Change to column layout for smaller screens */
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
+.footer-column:not(:last-child)::after {
+    display: none; /* Hide vertical dividing lines for smaller screens */
+}
 
-    .icons {
-      order: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin: 0;
-      padding: 10px 0;
+.footer-column {
+    max-width: 100%; /* Each column takes up full width */
+    padding: 10px 0; /* Adjust padding for smaller screens */
+    margin-bottom: 20px; /* Add margin between columns for better spacing */
+}
 
-      i {
-        text-align: center;
-        margin: 0 15px;
-      }
-    }
-
-    .search-box {
-      order: 3;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .nav-bar {
-      order: 4;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-  }
+address iframe{
+  width: 200px;
+  height: 150px;
+}
 }
