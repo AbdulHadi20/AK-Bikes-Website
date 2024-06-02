@@ -20,69 +20,133 @@ body::before {
 
 header {
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 5px 5px;
-  background-color: #000000;
-  box-shadow: 14px 0px 9.3000001907px 10px rgba(0, 0, 0, 0.25);
+  background: #222222;
+  padding: 23px 15%;
+  transition: all 0.38s ease;
+}
+
+.logo-img {
+  width: 100px;
+  height: 110px;
+}
+
+span {
+  color: #ff9100;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  margin: 2px 25px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.38s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #DA7A04;
+  color: #ff9100;
+}
+
+.h-icons {
+  display: flex;
+  align-items: center;
+  padding: 10px 22px;
+  background: #ff9100;
+  border-radius: 5rem;
+}
+
+.h-icons i {
+  font-size: 22px;
+  color: #fffbf6;
+  margin-right: 15px;
+  margin-left: 8px;
+}
+
+#menu-icon {
+  font-size: 32px;
+  color: #fffbf6;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+.search-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
   z-index: 1000;
 }
 
-header img {
-  width: 120px;
-  height: 120px;
-  /*media queries*/
+/* Style for search input and button */
+#search-input {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
-@media (max-width: 799px) {
-  header img {
-    width: 80px;
-    height: 80px;
+
+#search-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #DA7A04;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1690px) {
+  header {
+    padding: 11px 2%;
+    transition: 0.2s;
+  }
+  header.sticky {
+    padding: 8px 2%;
+    transition: 0.2s;
   }
 }
-@media (max-width: 599px) {
-  header img {
-    width: 60px;
-    height: 60px;
+@media screen and (max-width: 880px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 250px;
+    height: 110vh;
+    background: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 180px 40px;
+    transition: all 0.38s ease;
+  }
+  .navbar a {
+    display: block;
+    margin: 1.3rem 0;
+  }
+  .navbar.open {
+    right: 0;
   }
 }
-@media (max-width: 400px) {
-  header img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-header ul {
-  list-style-type: none;
-}
-
-.headd li {
-  width: auto;
-  top: 0;
-  padding: 0px 30px;
-  margin: 30px 0px;
-  display: inline-block;
-}
-
-.headd li a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.headd li:hover {
-  background-color: #a47700;
-  border-radius: 15px;
-}
-
-.icons i {
-  display: inline-block;
-  padding: 0px 20px;
-  margin: 50px 0px;
-  color: #ffffff;
-}
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -109,7 +173,7 @@ h1 {
 }
 .filters h3 {
   font-size: 200%;
-  color: rgb(255, 255, 255);
+  color: #000000;
 }
 .filters .filter-group {
   margin-bottom: 10%;
@@ -120,7 +184,7 @@ h1 {
 .filters .filter-group label {
   display: block;
   margin-bottom: 4%;
-  color: rgb(255, 255, 255);
+  color: #000000;
 }
 .filters .filter-group input[type=checkbox][name=color] {
   margin-right: 8px;
@@ -174,7 +238,7 @@ h1 {
 }
 .gallery .product-view.list-view .product img {
   width: 250px !important; /* Fixing width for the list view */
-  height: auto !important;
+  height: 155px !important;
 }
 .gallery .product-view.list-view .product .product-name {
   font-size: 23px;
@@ -406,5 +470,11 @@ body, html {
 @media (max-width: 599px) {
   .view-toggle button.list-view {
     display: none; /* Hide the list view button */
+  }
+  .product-name, .product-price {
+    font-size: 15px;
+  }
+  .product-view, .product {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=Rentals Pagescss.css.map */
