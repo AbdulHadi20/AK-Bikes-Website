@@ -142,10 +142,7 @@ header.sticky {
   padding: 180px 40px;
   transition: all 0.38s ease;
 }
-.navbar a {
-  display: block;
-  margin: 1.3rem 0;
-}
+
 .navbar.open {
   right: 0;
 }
