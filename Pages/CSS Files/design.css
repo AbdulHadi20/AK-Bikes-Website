@@ -300,22 +300,22 @@ header .search-box a {
 }
 
 .servicecon1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/washnlube.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/washnlube.JPG");
   background-size: cover;
 }
 
 .our-services .service-container .servicecon2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/projectx.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/projectx.JPG");
   background-size: cover;
 }
 
 .our-services .service-container .servicecon3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/projecty.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/projecty.JPG");
   background-size: cover;
 }
 
 .our-services .service-container .servicecon4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("D:/Web Design acts/projectz.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Media/projectz.JPG");
   background-size: cover;
 }
 
@@ -461,7 +461,6 @@ html {
 }
 
 .footer {
-  margin-top: -200px;
   background-color: #222222;
   padding: 20px 0;
   text-align: center;
@@ -472,24 +471,24 @@ html {
 }
 
 .footer-logo {
-  max-width: 150px;
+  max-width: 150px; /* Adjust size as needed */
   height: auto;
-  display: block;
-  margin: 0 auto;
+  display: block; /* Ensures the image is a block element */
+  margin: 0 auto; /* Centers the logo horizontally */
 }
 
 .footer-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
 }
 
 .footer-column {
   flex: 1;
-  max-width: 25%;
+  max-width: 25%; /* Each column takes up 25% of the width */
   padding: 0 10px;
-  box-sizing: border-box;
-  position: relative;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  position: relative; /* Required for pseudo-element */
 }
 
 .footer-column:not(:last-child)::after {
@@ -497,13 +496,12 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; /* Added to stretch the line to the bottom */
   width: 1px;
   background-color: #da7a04;
 }
 
-.navmenu,
-address {
+.navmenu, address {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -525,66 +523,56 @@ address {
 .text {
   font-size: 20px;
   font-style: italic;
-}
-
-.iconstyle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.iconstyle a {
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.iconstyle i {
-  font-size: 24px;
-  color: #fff;
-  transition: transform color 1s ease;
-}
-
-.iconstyle a:hover i {
-  transform: scale(1.4);
   color: #da7a04;
+}
+
+/* Container for icons */
+.iconstyle {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: center; /* Align icons horizontally */
+  align-items: center; /* Center icons vertically */
+}
+
+/* Style individual icon links */
+.iconstyle a {
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Style icon elements */
+.iconstyle i {
+  font-size: 24px; /* Adjust icon size */
+  color: #da7a04; /* Default icon color */
+  transition: transform color 1s ease; /* Add transition effect for zooming */
+}
+
+/* Hover effect for icon links */
+.iconstyle a:hover i {
+  transform: scale(1.4); /* Zoom in on hover */
+  color: #fffbf6;
 }
 
 .copyright {
   position: relative;
   font-size: 12px;
   margin-top: 20px;
+  color: #da7a04;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 899px) {
+  .footer-columns {
+    flex-direction: column; /* Change to column layout for smaller screens */
   }
-  header .icons {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 10px 0;
+  .footer-column:not(:last-child)::after {
+    display: none; /* Hide vertical dividing lines for smaller screens */
   }
-  header .icons i {
-    text-align: center;
-    margin: 0 15px;
+  .footer-column {
+    max-width: 100%; /* Each column takes up full width */
+    padding: 10px 0; /* Adjust padding for smaller screens */
+    margin-bottom: 20px; /* Add margin between columns for better spacing */
   }
-  header .search-box {
-    order: 3;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  header .nav-bar {
-    order: 4;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  address iframe {
+    width: 200px;
+    height: 150px;
   }
 }/*# sourceMappingURL=design.css.map */

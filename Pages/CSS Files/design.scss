@@ -347,19 +347,19 @@ header {
 }
 
 .servicecon1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/washnlube.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/washnlube.JPG');
   background-size: cover;
 }
 .our-services .service-container .servicecon2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/projectx.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/projectx.JPG');
   background-size: cover;
 }
 .our-services .service-container .servicecon3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/projecty.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/projecty.JPG');
   background-size: cover;
 }
 .our-services .service-container .servicecon4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('D:/Web Design acts/projectz.JPG');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Media/projectz.JPG');
   background-size: cover;
 }
 
@@ -544,7 +544,7 @@ html {
   right: 0;
   bottom: 0; /* Added to stretch the line to the bottom */
   width: 1px;
-  background-color: $color1;
+  background-color: #da7a04;
 }
 
 .navmenu, address {
@@ -588,21 +588,21 @@ html {
 /* Style icon elements */
 .iconstyle i {
   font-size: 24px; /* Adjust icon size */
-  color: $color1; /* Default icon color */
+  color: #da7a04; /* Default icon color */
   transition: transform color 1s ease; /* Add transition effect for zooming */
 }
 
 /* Hover effect for icon links */
 .iconstyle a:hover i {
   transform: scale(1.4); /* Zoom in on hover */
-  color: $color5;
+  color: #fffbf6;
 }
 
 .copyright {
   position: relative;
   font-size: 12px;
   margin-top: 20px;
-  color: $color1;
+  color: #da7a04;
 }
 @media (max-width: 899px) {
 .footer-columns {
